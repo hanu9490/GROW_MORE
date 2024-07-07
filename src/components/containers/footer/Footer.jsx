@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <p>© 2022 My Website testing for pull request</p>
+        <p>© 2022 My Website testing for pull request Sai  kumar
+          
+        </p>
       </footer>
     </div>
   )
