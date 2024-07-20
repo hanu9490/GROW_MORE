@@ -10,19 +10,19 @@
   margin-right: 20px;
 }
 
-.text-content {
+.why-chooseus-textcon {
   max-width: 600px;
 }
 
-.title {
+.why-chooseus-textcon .title {
   font-size: 16px;
   font-weight: bold;
   color: #1a1a3c;
-  margin: 0px 0px 0px 0px;
+  margin: 5px 0px 4px 0px;
 }
 
-.description {
-  font-size: 13px;
+.why-chooseus-textcon .description {
+  font-size: 14px;
   color: #666;
-  margin: 0px 0px 0px 0px;
+  margin: 5px 0px 7px 0px;
 }
