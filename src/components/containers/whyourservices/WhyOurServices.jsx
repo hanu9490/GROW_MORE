@@ -1,32 +1,32 @@
 import React from "react";
-import { icons } from "../../../assets/icons/icons";
+import { whyOurServicesIcons } from "../../../assets/icons/icons";
 import ServicesMinicard from "./ServicesMinicard";
 import "./WhyOurServices.css";
 
 const minicardData = [
   {
     title: "Quality Comes First",
-    img: icons.qualityFirst,
+    img: whyOurServicesIcons.qualityFirst,
   },
   {
     title: "Flexible Time",
-    img: icons.flexibleTime,
+    img: whyOurServicesIcons.flexibleTime,
   },
   {
     title: "On-time Delivery",
-    img: icons.ontimeDelivery,
+    img: whyOurServicesIcons.ontimeDelivery,
   },
   {
     title: "Transparent Costs",
-    img: icons.transparentCosts,
+    img: whyOurServicesIcons.transparentCosts,
   },
   {
     title: "Quick Scale-up",
-    img: icons.quickscaleUp,
+    img: whyOurServicesIcons.quickscaleUp,
   },
   {
     title: "Flexible Cooperation",
-    img: icons.flexibleCooperation,
+    img: whyOurServicesIcons.flexibleCooperation,
   },
 ];
 
@@ -37,12 +37,12 @@ const WhyOurServices = () => {
         <div className="img-con">
           <img
             className="img1"
-            src={icons.Rectangle17}
+            src={whyOurServicesIcons.Rectangle17}
             alt="WhyourServices.png1"
           />
           <img
             className="img2"
-            src={icons.Rectangle18}
+            src={whyOurServicesIcons.Rectangle18}
             alt="WhyourServices.png2"
           />
         </div>
@@ -61,19 +61,19 @@ const WhyOurServices = () => {
           </div>
           <div className="services-bottom-container">
             <div className="bottom-para-element">
-              <img src={icons.charmTick} alt="" />
+              <img src={whyOurServicesIcons.charmTick} alt="" />
               <p>Provide Responsive Web Design & Mobile Development</p>
             </div>
             <div className="bottom-para-element">
-              <img src={icons.charmTick} alt="" />
+              <img src={whyOurServicesIcons.charmTick} alt="" />
               <p>E-commerce Solutions & Online Stores</p>
             </div>
             <div className="bottom-para-element">
-              <img src={icons.charmTick} alt="" />
+              <img src={whyOurServicesIcons.charmTick} alt="" />
               <p>User Experience (UX) & User Interface (UI) Design</p>
             </div>
             <div className="bottom-para-element">
-              <img src={icons.charmTick} alt="" />
+              <img src={whyOurServicesIcons.charmTick} alt="" />
               <p>Data Science & Predictive Analytics</p>
             </div>
           </div>
