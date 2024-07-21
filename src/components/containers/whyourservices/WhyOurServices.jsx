@@ -74,7 +74,7 @@ const WhyOurServices = () => {
             </div>
             <div className="bottom-para-element">
               <img src={whyOurServicesIcons.charmTick} alt="" />
-              <p>Data Science & Predictive Analytics</p>
+              <p>Data Science & Predictive Analytics.</p>
             </div>
           </div>
         </div>
