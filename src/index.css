@@ -8,8 +8,11 @@
   src: url("./fonts//Poppins//Poppins-Bold.ttf") format("truetype");
 }
 
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
