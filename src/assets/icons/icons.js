@@ -15,6 +15,10 @@ import provenTrackRecord from "./whychooseusIcons/Proven-track-record.png";
 import rectangleMain from "./whychooseusIcons/Rectangle-main.png";
 import TeamExpertTrust from "./whychooseusIcons/Team-expert-trust.png";
 
+//what we do icons imports
+import dataAnalysis from "./whatwedoIcons/data-analysis.png"
+import webDevelopment from "./whatwedoIcons/web-development.png"
+
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -33,3 +37,8 @@ export const whyChooseusIcons = {
   rectangleMain,
   TeamExpertTrust,
 };
+
+export const whatWedoIcons = {
+  dataAnalysis,
+  webDevelopment,
+}
