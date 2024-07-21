@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../../common/Card";
 const WhatWeDo = () => {
   return (
-    <div>
+    <div className="what-we-do-card-container">
       <Card
         image="./path_to_your_image.jpg"
         heading="Card Heading"
