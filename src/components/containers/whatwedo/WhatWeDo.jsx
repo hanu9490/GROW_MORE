@@ -46,7 +46,7 @@ const WhatWeDo = () => {
     <>
     <div className="what-we-do-card-heading-container">
         <p className="what-we-do-card-heading1">WHAT WE DO</p>
-        <div className="what-we-do-card-heading2">We offer Top-Notch Services</div>
+        <div className="what-we-do-card-heading2">We Offer Top-Notch Services</div>
     </div>
     <div className="what-we-do-card-container">
     {cardData.map((card, index) => (

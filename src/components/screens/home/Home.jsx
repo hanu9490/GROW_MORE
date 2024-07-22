@@ -7,8 +7,8 @@ const Home = () => {
     <div>
     <h1>Home screen</h1>
     <WhatWeDo />
-    <WhyOurServices />
-    <WhyChooseus />
+    {/* <WhyOurServices />
+    <WhyChooseus /> */}
     </div>
   )
 }
