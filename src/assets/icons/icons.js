@@ -16,8 +16,16 @@ import rectangleMain from "./whychooseusIcons/Rectangle-main.png";
 import TeamExpertTrust from "./whychooseusIcons/Team-expert-trust.png";
 
 //what we do icons imports
-import dataAnalysis from "./whatwedoIcons/data-analysis.png"
-import webDevelopment from "./whatwedoIcons/web-development.png"
+import dataAnalysis from "./whatwedoIcons/data-analysis.png";
+import webDevelopment from "./whatwedoIcons/web-development.png";
+
+//contact us icons imports
+import contactUs from "./contactusIcons/contact-us.png";
+import callService from "./contactusIcons/call-service.png";
+import facebook from "./contactusIcons/face-book.png";
+import linkedin from "./contactusIcons/linked-in.png";
+import twitter from "./contactusIcons/twitter.png";
+import youtube from "./contactusIcons/youtube.png";
 
 export const whyOurServicesIcons = {
   Rectangle17,
@@ -41,4 +49,13 @@ export const whyChooseusIcons = {
 export const whatWedoIcons = {
   dataAnalysis,
   webDevelopment,
-}
+};
+
+export const contactUsIcons = {
+  contactUs,
+  callService,
+  facebook,
+  linkedin,
+  twitter,
+  youtube,
+};

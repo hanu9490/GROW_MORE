@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+.contactus-main-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0d1741;
+  width: 100vw;
+  padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.contact-us-container {
+  color: white;
+  padding: 20px;
+  width: 40%;
+  margin-left: 50px;
+}
+
+@media (max-width:1250px){                              /* Media Query */
+  .contact-us-container{
+    margin-left: 0px;
+  }
+}
+
+.contact-us-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-us-container .contact-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.contact-us-container .main-heading {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-us-container .description {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #bababa;
+  width: 498px;
+}
+
+.contact-us-container .highlight {
+  color: #00b894;
+}
+
+.contact-us-container .divider {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info .phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.phone-inner-con {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+}
+
+.phone-inner-con .phone-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+}
+
+.contactus-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-right: 50px;
+}
+
+@media (max-width: 1250px) {                           /* Media Query */
+  .contactus-input-container {
+    margin-right: 0px;
+  }
+}
+
+.contactus-input-container .input-heading {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contactus-input-container input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.contactus-input-container textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  height: 80px;
+}
+
+::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+  font-weight: 300;
+}
+
+.contactus-input-container button {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #000;
+  outline: none;
+  font-size: 20px;
+}
