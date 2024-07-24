@@ -1,5 +1,6 @@
 import React from "react";
 import JobCard from "./JobCard";
+import FeatureOfInternship from "./FeatureOfInternship";
 const Internship = () => {
     const jobData = [
         {
@@ -56,6 +57,9 @@ const Internship = () => {
                 )
             })
         }
+        </div>
+        <div>
+            <FeatureOfInternship/>
         </div>
     </div>
   );
