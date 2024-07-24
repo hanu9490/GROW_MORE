@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 .contactus-main-container {
@@ -45,7 +46,7 @@
   font-size: 13px;
   margin-bottom: 20px;
   color: #bababa;
-  width: 498px;
+  max-width: 498px;
 }
 
 .contact-us-container .highlight {
