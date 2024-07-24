@@ -27,6 +27,10 @@ import linkedin from "./contactusIcons/linked-in.png";
 import twitter from "./contactusIcons/twitter.png";
 import youtube from "./contactusIcons/youtube.png";
 
+//Navbar icon import
+import growMore from "./navbarIcons/grow-more.png";
+import menuIcon from "./navbarIcons/menu-icon.png";
+
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -58,4 +62,9 @@ export const contactUsIcons = {
   linkedin,
   twitter,
   youtube,
+};
+
+export const navbarIcons = {
+  growMore,
+  menuIcon,
 };
