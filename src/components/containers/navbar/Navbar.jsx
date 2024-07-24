@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { navbarIcons } from "../../../assets/icons/icons";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -23,22 +25,22 @@ const Navbar = () => {
       <img src={navbarIcons.growMore} alt="" className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
-          <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link onClick={()=>{navigate('/')}} spy={true} smooth={true} offset={-100} duration={500}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="about" smooth={true} offset={0} duration={500}>
-            About
+          <Link onClick={()=>{navigate('/whatwedo')}} smooth={true} offset={0} duration={500}>
+            WhatWeDo
           </Link>
         </li>
         <li>
-          <Link to="carrers" smooth={true} offset={0} duration={500}>
+          <Link onClick={()=>{navigate('/whatwedo')}} smooth={true} offset={0} duration={500}>
             Carrers
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} offset={0} duration={500}>
+          <Link  onClick={()=>{navigate('/contactus')}} smooth={true} offset={0} duration={500}>
             Contact
           </Link>
         </li>
