@@ -46,7 +46,7 @@ const WhyOurServices = () => {
             alt="WhyourServices.png2"
           />
         </div>
-        <div className="text-con">
+        <div className="why-our-services-text">
           <h1>Why Our Services are Better than Others ?</h1>
           <p>
             Our objective is to offer a high-quality service and a dependable

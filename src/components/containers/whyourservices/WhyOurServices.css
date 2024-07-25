@@ -8,6 +8,16 @@
   margin-top: 80px;
 }
 
+<<<<<<< HEAD
+.our-services-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    padding: 20px;
+    /* border: solid; */
+=======
 .our-services-inner {
   display: flex;
   justify-content: center;
@@ -16,6 +26,7 @@
   height: 90vh;
   padding: 20px;
   /* border: solid; */
+>>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
 }
 
 .img-con {
@@ -36,6 +47,27 @@
   margin-left: 20px;
 }
 
+<<<<<<< HEAD
+.why-our-services-text{
+    width: 55%;
+    margin-left: 25px;
+}
+
+.why-our-services-text h1{
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0px;
+    width: 70%;
+}
+
+.why-our-services-text p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #1F2732;
+    font-weight: 100;
+    font-style: normal;
+    margin: 10px 0px 25px 0px;
+=======
 .text-con {
   width: 55%;
   margin-left: 25px;
@@ -53,6 +85,7 @@
   color: #1f2732;
   font-weight: 100;
   font-style: normal;
+>>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
 }
 
 .minicards-container {
