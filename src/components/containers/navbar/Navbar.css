@@ -34,6 +34,10 @@ nav ul li {
   background-color: #212ea0;
   transition: 0.5s;
 }
+.light-nav {
+  background-color: grey;
+  transition: 0.5s;
+}
 
 .menu-icon {
   display: none;

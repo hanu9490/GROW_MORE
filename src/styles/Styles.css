@@ -1,5 +1,6 @@
 .what-we-do-card-heading-container {
   text-align: center;
+  margin-top: 80px;
 }
 .what-we-do-card-heading1 {
   font-size: 2em;
@@ -39,6 +40,7 @@
 /* css for Intership component */
 
 .internship-container {
+  margin-top: 80px;
   .intership-text-fields {
     display: flex;
     justify-content: space-between;

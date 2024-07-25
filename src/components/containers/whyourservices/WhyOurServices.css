@@ -1,12 +1,14 @@
-.our-services-container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.our-services-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
 }
 
+<<<<<<< HEAD
 .our-services-inner{
     display: flex;
     justify-content: center;
@@ -15,27 +17,37 @@
     height: 90vh;
     padding: 20px;
     /* border: solid; */
+=======
+.our-services-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  padding: 20px;
+  /* border: solid; */
+>>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
 }
 
-
-.img-con{
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    /* background-color: aquamarine; */
+.img-con {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  /* background-color: aquamarine; */
 }
-.img1{
-    height: 50%;
-    width: 45%;
-}
-
-.img2{
-    height: 50%;
-    width: 45%;
-    margin-top: 20%;
-    margin-left: 20px;
+.img1 {
+  height: 50%;
+  width: 45%;
 }
 
+.img2 {
+  height: 50%;
+  width: 45%;
+  margin-top: 20%;
+  margin-left: 20px;
+}
+
+<<<<<<< HEAD
 .why-our-services-text{
     width: 55%;
     margin-left: 25px;
@@ -55,22 +67,40 @@
     font-weight: 100;
     font-style: normal;
     margin: 10px 0px 25px 0px;
+=======
+.text-con {
+  width: 55%;
+  margin-left: 25px;
 }
 
-
-.minicards-container{
-    display: flex;
-    flex-wrap: wrap;
+.text-con h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0px;
 }
 
-.bottom-para-element{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin:15px 0px 15px 0px;
+.text-con p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1f2732;
+  font-weight: 100;
+  font-style: normal;
+>>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
+}
+
+.minicards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bottom-para-element {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px 0px 15px 0px;
 }
 
 .bottom-para-element p {
-    margin: 0px 0px 0px 15px;
-    font-size: 16px;
+  margin: 0px 0px 0px 15px;
+  font-size: 16px;
 }
