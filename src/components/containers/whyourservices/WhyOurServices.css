@@ -8,7 +8,6 @@
   margin-top: 80px;
 }
 
-<<<<<<< HEAD
 .our-services-inner{
     display: flex;
     justify-content: center;
@@ -17,16 +16,6 @@
     height: 90vh;
     padding: 20px;
     /* border: solid; */
-=======
-.our-services-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  height: 90vh;
-  padding: 20px;
-  /* border: solid; */
->>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
 }
 
 .img-con {
@@ -47,7 +36,6 @@
   margin-left: 20px;
 }
 
-<<<<<<< HEAD
 .why-our-services-text{
     width: 55%;
     margin-left: 25px;
@@ -67,25 +55,6 @@
     font-weight: 100;
     font-style: normal;
     margin: 10px 0px 25px 0px;
-=======
-.text-con {
-  width: 55%;
-  margin-left: 25px;
-}
-
-.text-con h1 {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0px;
-}
-
-.text-con p {
-  font-size: 20px;
-  font-weight: 500;
-  color: #1f2732;
-  font-weight: 100;
-  font-style: normal;
->>>>>>> 1e861b70e0e14739b60de75104321bde58a370e5
 }
 
 .minicards-container {
