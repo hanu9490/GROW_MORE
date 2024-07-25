@@ -31,6 +31,9 @@ import youtube from "./contactusIcons/youtube.png";
 import growMore from "./navbarIcons/grow-more.png";
 import menuIcon from "./navbarIcons/menu-icon.png";
 
+//testimonials assets imports
+import hanuClientimg from "./testimonials/Hanumanthu-Profile.png" 
+
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -68,3 +71,7 @@ export const navbarIcons = {
   growMore,
   menuIcon,
 };
+
+export const testimonialsImg = {
+  hanuClientimg,
+}
