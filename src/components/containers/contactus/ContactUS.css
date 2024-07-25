@@ -11,6 +11,7 @@
   padding: 25px;
   padding-left: 50px;
   padding-right: 50px;
+  margin-top: 80px;
 }
 
 .contact-us-container {
@@ -20,8 +21,9 @@
   margin-left: 50px;
 }
 
-@media (max-width:1250px){                              /* Media Query */
-  .contact-us-container{
+@media (max-width: 1250px) {
+  /* Media Query */
+  .contact-us-container {
     margin-left: 0px;
   }
 }
@@ -101,7 +103,8 @@
   margin-right: 50px;
 }
 
-@media (max-width: 1250px) {                           /* Media Query */
+@media (max-width: 1250px) {
+  /* Media Query */
   .contactus-input-container {
     margin-right: 0px;
   }

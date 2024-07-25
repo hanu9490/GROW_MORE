@@ -1,79 +1,83 @@
-  .testimonials {
-    padding: 50px 0;
-    background: linear-gradient(to right, hsl(186, 98%, 37%), hsl(170, 100%, 40%));
-  }
-  
-  .container {
-    max-width: 1170px;
-    margin: auto;
-    padding: 0 15px;
-  }
-  
-  .swiper {
-    max-height: 350px;
-    padding-bottom: 50px; 
-  }
-  
-  .swiper-pagination {
-    margin-top: 50px; /* Add margin to the top of the pagination for spacing */
-  }
-  
-  /* Section header */
-  .section-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .section-header .title {
-    font-size: 35px;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: hsl(0, 0%, 100%);
-    line-height: 1.2;
-  }
-  
-  .testimonials-item {
-    background-color: hsl(0, 0%, 100%);
-    padding: 30px;
-    border-radius: 30px;
-  }
-  
-  .testimonials-item .info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .testimonials-item img {
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-    vertical-align: middle;
-    border: 3px solid #1d8ba0;
-  }
-  
-  .testimonials-item .name {
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 600;
-    color: hsl(0, 0%, 0%);
-    line-height: 1.2;
-  }
-  
-  .testimonials-item .job {
-    text-transform: capitalize;
-    color: hsl(201, 88%, 49%);
-  }
-  
-  .testimonials-item p {
-    font-size: 13px;
-    margin-top: 15px;
-    color: hsl(0, 0%, 40%);
-  }
-  
-  .testimonials-item .rating {
-    margin-top: 10px;
-    font-size: 14px;
-    color: hsl(36, 88%, 66%);
-  }
-  
+.testimonials {
+  padding: 50px 0;
+  background: linear-gradient(
+    to right,
+    hsl(186, 98%, 37%),
+    hsl(170, 100%, 40%)
+  );
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.swiper {
+  max-height: 350px;
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  margin-top: 50px; /* Add margin to the top of the pagination for spacing */
+}
+
+/* Section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header .title {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.2;
+}
+
+.testimonials-item {
+  background-color: hsl(0, 0%, 100%);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.testimonials-item .info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials-item img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+  border: 3px solid #1d8ba0;
+}
+
+.testimonials-item .name {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+  line-height: 1.2;
+}
+
+.testimonials-item .job {
+  text-transform: capitalize;
+  color: hsl(201, 88%, 49%);
+}
+
+.testimonials-item p {
+  font-size: 13px;
+  margin-top: 15px;
+  color: hsl(0, 0%, 40%);
+}
+
+.testimonials-item .rating {
+  margin-top: 10px;
+  font-size: 14px;
+  color: hsl(36, 88%, 66%);
+}

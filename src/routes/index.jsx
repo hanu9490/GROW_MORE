@@ -11,7 +11,7 @@ import Testimonials from "../components/containers/testimonials/Testimonials";
 
 const routes = (
   <React.Fragment>
-    {/* <Navbar /> */}
+    <Navbar />
     <Routes>
       <Route path="/" element={<Hero />} />
       <Route path="/whatwedo" element={<WhatWeDo />} />
