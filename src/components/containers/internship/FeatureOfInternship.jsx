@@ -8,22 +8,22 @@ const FeatureOfInternship = () => {
     {
       title: "Verified Certificates",
       info: "Get Verified Certificates to prove your hard work!",
-      logo: <DocumentScannerIcon color="primary"  sx={{ fontSize: 60 }} />,
+      logo: <DocumentScannerIcon   sx={{ fontSize: 50 , color:'white'}} />,
     },
     {
       title: "Networking",
       info: "Tap into our network and increase your chances of placements.",
-      logo: <Diversity2Icon color="primary"  sx={{ fontSize: 60 }} />,
+      logo: <Diversity2Icon color="primary"  sx={{ fontSize: 50 , color:'white' }} />,
     },
     {
       title: "Hands-on experience",
       info: "Gain practical experience by working on real-world projects.",
-      logo: <VolunteerActivismIcon color="primary"  sx={{ fontSize: 60 }} />,
+      logo: <VolunteerActivismIcon color="primary"  sx={{ fontSize: 50 , color:'white' }} />,
     },
     {
       title: "High Quality Content",
       info: "Great Content to prepare students for their future careers.",
-      logo: <AutoAwesomeMotionIcon color="primary"  sx={{ fontSize: 60 }} />,
+      logo: <AutoAwesomeMotionIcon color="primary"  sx={{ fontSize: 50 , color:'white' }} />,
     },
   ];
   return (
@@ -33,7 +33,7 @@ const FeatureOfInternship = () => {
       <div className="menu-items">
         {ItemDetails.map((item) => (
           <div className="item">
-            <div className="icon">{item.logo}</div>
+            <div className="icon" style={{marginBottom :'20px'}}>{item.logo}</div>
             <div className="heading1">{item.title}</div>
             <div className="heading2">{item.info}</div>
           </div>

@@ -103,38 +103,146 @@
 
 .features-of-internship-container {
   padding: 40px;
+}
+
+.features-of-internship-container .h1 {
+  color: #3056d3;
+  font-size: 24px;
+}
+
+.features-of-internship-container .h2 {
+  font-size: 42px;
+  font-family: "Poppins-Bold";
+}
+
+.features-of-internship-container .menu-items {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.features-of-internship-container .menu-items .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.features-of-internship-container .menu-items .item .icon {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: #3056d3;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.features-of-internship-container .menu-items .item .icon:hover {
+  transform: rotate(90deg);
+}
+
+.features-of-internship-container .menu-items .item .heading1 {
+  font-size: 20px;
+  font-family: "Poppins-semi-bold";
+}
+
+.features-of-internship-container .menu-items .item .heading2 {
+  font-size: 18px;
+  color: #637381;
+  max-width: 300px;
+}
+
+@media (max-width: 600px) {
+  .features-of-internship-container .menu-items {
+    flex-direction: column;
+  }
+}
+
+/* css for internship accordion  */
+.internship-accordion-container {
+  margin-top: 60px;
+  background: #f3f4fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h1 {
+  margin-top: 60px;
+  padding: 10px;
+  font-size: 24px;
+  color: #3056d3;
+  font-family: "Poppins-semi-bold";
+}
+
+.h2 {
+  font-size: 34px;
+  font-family: "Poppins-Bold";
+}
+
+.accordion-container {
+  margin: 60px 0px 60px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.accordion-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-container .MuiAccordion-root {
+  box-sizing: border-box;
+  padding: 30px;
+  font-family: "Poppins", sans-serif; /* Apply font family */
+  font-size: 18px; /* Apply font size */
+}
+
+.accordion-container .MuiAccordionSummary-root {
+  background-color: #fff;
+}
+
+.accordion-container .MuiAccordionDetails-root {
+  background-color: #f9f9f9; /* Background color for the details part */
+}
+
+.accordion-container .MuiTypography-root {
+  width: 100%; /* Ensure the typography takes full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  font-family: "Poppins", sans-serif; /* Apply font family */
+  font-size: 18px; /* Apply font size */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .accordion-container .MuiAccordion-root {
+    padding: 20px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
   .h1 {
-    color: #3056d3;
-    font-size: 24px;
+    font-size: 20px; /* Adjust font size for smaller screens */
   }
+
   .h2 {
-    font-size: 42px;
-    font-family: "Poppins-bold";
-  }
-  .menu-items {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-    .item {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      .icon {
-        width: 100px;
-        height: auto;
-        color: "#3056d3";
-      }
-      .heading1 {
-        font-size: 20px;
-        font-weight: 500;
-      }
-      .heading2 {
-        font-size: 18px;
-        color: #637381;
-        max-width: 400px;
-      }
-    }
+    font-size: 28px; /* Adjust font size for smaller screens */
   }
 }

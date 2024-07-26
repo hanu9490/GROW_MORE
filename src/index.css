@@ -7,7 +7,10 @@
   font-family: "Poppins-Bold";
   src: url("./fonts//Poppins//Poppins-Bold.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "Poppins-semi-bold";
+  src: url("./fonts//Poppins//Poppins-SemiBold.ttf") format("truetype");
+}
 
 body {
   margin: 0;
@@ -20,21 +23,21 @@ body {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
   line-height: 1;
   cursor: pointer;
 }
 
-.nav-container{
+.nav-container {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-@media (max-width:1200px){
-  .nav-container{
+@media (max-width: 1200px) {
+  .nav-container {
     padding-left: 5%;
     padding-right: 5%;
-    }
+  }
 }
