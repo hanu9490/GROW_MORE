@@ -60,7 +60,7 @@
       font-size: 16px;
       line-height: 26px;
       font-family: "Poppins";
-      width: 600px;
+      max-width: 600px;
       text-align: center;
       color: #637381;
     }
@@ -95,6 +95,45 @@
     }
     .job-card-container .JobCard {
       flex: 0 0 calc(90% - 20px); /* Adjust width for very small screens */
+    }
+  }
+}
+
+/* css for feature of internship */
+
+.features-of-internship-container {
+  padding: 40px;
+  .h1 {
+    color: #3056d3;
+    font-size: 24px;
+  }
+  .h2 {
+    font-size: 42px;
+    font-family: "Poppins-bold";
+  }
+  .menu-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .icon {
+        width: 50px;
+        height: auto;
+        color: "#3056d3";
+      }
+      .heading1 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .heading2 {
+        font-size: 18px;
+        color: #637381;
+        max-width: 400px;
+      }
     }
   }
 }

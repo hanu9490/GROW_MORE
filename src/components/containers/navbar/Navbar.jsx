@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link  onClick={()=>{navigate('/testimonial')}} smooth={true} offset={0} duration={500}>
+          <Link  onClick={()=>{navigate('/reviews')}} smooth={true} offset={0} duration={500}>
           Testimonial
           </Link>
         </li>
