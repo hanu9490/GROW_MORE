@@ -7,7 +7,7 @@ import Navbar from "../components/containers/navbar/Navbar";
 import Hero from "../components/containers/hero/Hero";
 import WhatWeDo from "../components/containers/whatwedo/WhatWeDo";
 import Internship from "../components/containers/internship/Internship";
-import Testimonials from "../components/containers/testimonials/Testimonials";
+import Reviews from "../components/containers/reviews/Reviews";
 
 const routes = (
   <React.Fragment>
@@ -19,7 +19,7 @@ const routes = (
       <Route path="/whychooseus" element={<WhyChooseus />} />
       <Route path="/internship" element={<Internship />} />
       <Route path="/contactus" element={<ContactUs />} />
-      <Route path="/testimonial" element={<Testimonials />} />
+      <Route path="/reviews" element={<Reviews />} />
     </Routes>
   </React.Fragment>
 );

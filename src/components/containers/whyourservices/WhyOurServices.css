@@ -1,6 +1,6 @@
 .our-services-container {
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,22 +8,22 @@
   margin-top: 80px;
 }
 
-.our-services-inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    height: 90vh;
-    padding: 20px;
-    /* border: solid; */
+.our-services-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  padding: 20px;
+  /* border: solid; */
 }
 
 .img-con {
   width: 45%;
   display: flex;
   justify-content: center;
-  /* background-color: aquamarine; */
 }
+
 .img1 {
   height: 50%;
   width: 45%;
@@ -36,25 +36,25 @@
   margin-left: 20px;
 }
 
-.why-our-services-text{
-    width: 55%;
-    margin-left: 25px;
+.why-our-services-text {
+  width: 55%;
+  margin-left: 25px;
 }
 
-.why-our-services-text h1{
-    font-size: 35px;
-    font-weight: 600;
-    margin: 0px;
-    width: 70%;
+.why-our-services-text h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0px;
+  width: 70%;
 }
 
-.why-our-services-text p{
-    font-size: 18px;
-    font-weight: 500;
-    color: #1F2732;
-    font-weight: 100;
-    font-style: normal;
-    margin: 10px 0px 25px 0px;
+.why-our-services-text p {
+  font-size: 1em;
+  font-weight: 500;
+  color: #1f2732;
+  font-weight: 100;
+  font-style: normal;
+  margin: 10px 0px 25px 0px;
 }
 
 .minicards-container {
@@ -72,4 +72,85 @@
 .bottom-para-element p {
   margin: 0px 0px 0px 15px;
   font-size: 16px;
+}
+
+/* ------------------Media Quaries (MidDevices:1200)-------------------- */
+
+@media (max-width: 1200px) {
+  .our-services-inner {
+    height: 100%;
+    width: 100%;
+  }
+
+  .img1 {
+    height: 100%;
+    width: 45%;
+  }
+
+  .img2 {
+    height: 100%;
+    width: 45%;
+  }
+
+  .why-our-services-text h1 {
+    font-size: 25px;
+    width: 80%;
+  }
+
+  .why-our-services-text p {
+    font-size: 13px;
+    margin: 10px 0px 15px 0px;
+    /* width: 60%; */
+  }
+
+  .bottom-para-element {
+    margin: 10px 0px 10px 0px;
+  }
+
+  .bottom-para-element p {
+    margin: 0px 0px 0px 5px;
+    font-size: 13px;
+  }
+}
+
+/* ------------------Media Quaries (Mobile Screens:800)-------------------- */
+
+@media (max-width: 800px) {
+  .our-services-container {
+    margin-top: 40%;
+  }
+  .our-services-inner {
+    flex-direction: column;
+  }
+
+  .img-con {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .why-our-services-text {
+    width: 95%;
+    margin-left: 0px;
+  }
+
+  .why-our-services-text h1 {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .why-our-services-text p {
+    font-size: 13px;
+    margin: 10px 0px 15px 0px;
+  }
+
+  .bottom-para-element {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .bottom-para-element p {
+    margin: 0px 0px 0px 10px;
+    font-size: 13px;
+  }
 }
