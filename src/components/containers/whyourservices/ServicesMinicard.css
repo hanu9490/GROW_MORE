@@ -23,9 +23,43 @@
 .why-our-services-minicard .minicard-title {
   font-size: 16px;
   font-weight: 600;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #0D1741;
   margin-left: 10px;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+}
+
+/* -------------------------------- Media Quaries ----------------------------------------- */
+
+@media (max-width : 1200px){
+  .why-our-services-minicard {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .why-our-services-minicard img{
+    width: 25px;
+    margin-left: 10px;
+}
+
+  .why-our-services-minicard .minicard-title {
+    font-size: 10px;
+    margin-left: 8%;
+  }
+
+}
+
+
+/* ------------------Media Quaries (Mobile Screens:800)-------------------- */
+
+@media (max-width: 800px) {
+  .why-our-services-minicard{
+    min-width :45%;
+    padding: 10px;
+    min-height: 40px;
+  }
+  
+  .why-our-services-minicard .minicard-title {
+    font-size: 13px;
+    margin-left: 8%;
+  }
 }
