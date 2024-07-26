@@ -8,22 +8,22 @@ const FeatureOfInternship = () => {
     {
       title: "Verified Certificates",
       info: "Get Verified Certificates to prove your hard work!",
-      logo: <DocumentScannerIcon />,
+      logo: <DocumentScannerIcon color="primary"  sx={{ fontSize: 60 }} />,
     },
     {
       title: "Networking",
       info: "Tap into our network and increase your chances of placements.",
-      logo: <Diversity2Icon />,
+      logo: <Diversity2Icon color="primary"  sx={{ fontSize: 60 }} />,
     },
     {
       title: "Hands-on experience",
       info: "Gain practical experience by working on real-world projects.",
-      logo: <VolunteerActivismIcon />,
+      logo: <VolunteerActivismIcon color="primary"  sx={{ fontSize: 60 }} />,
     },
     {
       title: "High Quality Content",
       info: "Great Content to prepare students for their future careers.",
-      logo: <AutoAwesomeMotionIcon />,
+      logo: <AutoAwesomeMotionIcon color="primary"  sx={{ fontSize: 60 }} />,
     },
   ];
   return (

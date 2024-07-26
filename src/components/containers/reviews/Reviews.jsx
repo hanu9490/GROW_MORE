@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 function Reviews() {
   return (
     <div className="testimonial">
-      <h2 className="testimonial-title">A word from our customers</h2>
+      <h2 className="testimonial-title">A word from our customers.</h2>
       <Swiper
         loop={true}
         pagination={{

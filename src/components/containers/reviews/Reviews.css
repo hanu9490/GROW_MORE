@@ -21,11 +21,7 @@
 }
 
 .testimonial-text {
-  background: linear-gradient(
-    to right,
-    hsl(258, 96%, 10%),
-    hsl(265, 93%, 29%)
-  );
+  background: linear-gradient(to right, hsl(258, 96%, 10%), hsl(265, 93%, 29%));
   display: flex;
   color: white;
   padding: 20px;
@@ -35,16 +31,16 @@
   position: relative;
 }
 
-.testimonial-text .quote-icon{
+.testimonial-text .quote-icon {
   font-size: 30px;
 }
 
-.testimonial-text p{
+.testimonial-text p {
   font-size: 1.2em;
 }
 
 .testimonial-text::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px; /* Adjust based on the arrow size */
   left: 50%;
@@ -71,7 +67,7 @@
 .testimonial-name {
   font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .testimonial-position {

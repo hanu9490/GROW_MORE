@@ -18,6 +18,7 @@ const Tester = ({text, name, position }) => {
             className="testimonial-image"
           />
           <h3 className="testimonial-name">{name}</h3>
+          
           <p className="testimonial-position">{position}</p>
         </div>
       </div>
