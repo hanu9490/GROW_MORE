@@ -1,7 +1,8 @@
 .why-chooseus-container-main {
   width: 100vw;
-  margin-top: 80px;
+  margin-top: 30px;
   gap: 50;
+  background: #f3f4fe;
 }
 
 .why-chooseus-inner {

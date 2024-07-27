@@ -62,7 +62,7 @@ const WhyOurServices = () => {
           <div className="services-bottom-container">
             <div className="bottom-para-element">
               <img src={whyOurServicesIcons.charmTick} alt="" />
-              <p>Provide Responsive Web Design & Mobile Development</p>
+              <p>Provide Responsive Web Design & Mobile Development.</p>
             </div>
             <div className="bottom-para-element">
               <img src={whyOurServicesIcons.charmTick} alt="" />
