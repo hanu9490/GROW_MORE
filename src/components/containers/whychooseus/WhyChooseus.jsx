@@ -40,9 +40,11 @@ const WhyChooseus = () => {
             many IT agencies out there, why choose <span className="special">GrowMore</span>? Here's
             why we stand out
           </p>
+          <div className="why-chooseus-card-con">
           {whyChooseusCardObj.map((card, index) => {
             return <WhyChooseusMinicard key={index} {...card} />;
           })}
+          </div>
         </div>
       </div>
     </div>

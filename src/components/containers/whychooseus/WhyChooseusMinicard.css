@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   /* margin-bottom: 5px; */
+  width: 100%;
 }
 
 .why-chooseus-minicard-container img {
@@ -25,4 +26,29 @@
   font-size: 14px;
   color: #666;
   margin: 5px 0px 7px 0px;
+}
+
+/* -------------------------- Media Query for Mid Level Screens ---------------------- */
+
+@media (max-width:1000px){
+  .why-chooseus-minicard-container{
+    margin-top: 20px;
+  }
+  .why-chooseus-minicard-container img {
+    width: 40px;
+    height: 40px;
+    align-self: flex-start;
+  }
+
+  .why-chooseus-textcon .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a3c;
+  }
+
+  .why-chooseus-textcon .description {
+    font-size: 13px;
+    color: #666;
+    margin: 5px 0px 7px 0px;
+  }
 }

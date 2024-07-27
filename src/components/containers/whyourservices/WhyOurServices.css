@@ -22,27 +22,28 @@
   width: 45%;
   display: flex;
   justify-content: center;
+  height: 550px;
 }
 
 .img1 {
-  height: 50%;
+  height: 80%;
   width: 45%;
 }
 
 .img2 {
-  height: 50%;
+  height: 80%;
   width: 45%;
   margin-top: 20%;
   margin-left: 20px;
 }
 
 .why-our-services-text {
-  width: 55%;
+  width: 80%;
   margin-left: 25px;
 }
 
 .why-our-services-text h1 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   margin: 0px;
   width: 70%;
@@ -81,6 +82,10 @@
     height: 100%;
     width: 100%;
   }
+  
+  .img-con {
+    height: 350px;
+  }
 
   .img1 {
     height: 100%;
@@ -90,6 +95,11 @@
   .img2 {
     height: 100%;
     width: 45%;
+    margin-top: 13%;
+  }
+
+  .why-our-services-text {
+    padding-top: 10px;
   }
 
   .why-our-services-text h1 {
@@ -100,7 +110,7 @@
   .why-our-services-text p {
     font-size: 13px;
     margin: 10px 0px 15px 0px;
-    /* width: 60%; */
+    width: 95%;
   }
 
   .bottom-para-element {
@@ -117,7 +127,7 @@
 
 @media (max-width: 800px) {
   .our-services-container {
-    margin-top: 40%;
+    margin-top: 60%;
   }
   .our-services-inner {
     flex-direction: column;
@@ -128,6 +138,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    height: auto;
   }
 
   .why-our-services-text {
@@ -143,6 +154,10 @@
   .why-our-services-text p {
     font-size: 13px;
     margin: 10px 0px 15px 0px;
+  }
+
+  .minicards-container {
+    margin-bottom: 15px;
   }
 
   .bottom-para-element {
