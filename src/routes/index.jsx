@@ -8,6 +8,8 @@ import Hero from "../components/containers/hero/Hero";
 import WhatWeDo from "../components/containers/whatwedo/WhatWeDo";
 import Internship from "../components/containers/internship/Internship";
 import Reviews from "../components/containers/reviews/Reviews";
+import OurTechnology from "../components/containers/our-technology/OurTechnology";
+import Footer from "../components/containers/footer/Footer";
 
 const routes = (
   <React.Fragment>
@@ -20,6 +22,8 @@ const routes = (
       <Route path="/internship" element={<Internship />} />
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/reviews" element={<Reviews />} />
+      <Route path="/our-technology" element={<OurTechnology />} />
+      <Route path="/footer" element={<Footer />} />
     </Routes>
   </React.Fragment>
 );

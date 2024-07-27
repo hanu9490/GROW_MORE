@@ -1,6 +1,6 @@
 import React from "react";
 import { contactUsIcons } from "../../../assets/icons/icons";
-import { RiMessage2Line } from "react-icons/ri";
+// import { RiMessage2Line } from "react-icons/ri";
 import "./ContactUS.css";
 
 const ContactUs = () => {

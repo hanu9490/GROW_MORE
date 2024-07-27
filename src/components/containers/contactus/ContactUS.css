@@ -153,3 +153,52 @@
   outline: none;
   font-size: 20px;
 }
+
+/* -------------------------------- Media Query for Mid Level ---------------------------- */
+
+@media (max-width: 1200px) {
+  .contact-us-container {
+    padding: 10px;
+    width: 55%;
+    margin-left: 20px;
+    margin-right: 30px;
+    padding: 20px;
+  }
+
+  .contact-us-container .main-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+}
+
+/* -------------------------------- Media Query for Mobile screen---------------------------- */
+
+@media (max-width: 840px) {
+  .contactus-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .contact-us-container {
+    width: 100%;
+  }
+
+  .contactus-input-container {
+    width: 100%;
+  }
+
+  .phone-inner-con .phone-number {
+    font-size: 15px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
