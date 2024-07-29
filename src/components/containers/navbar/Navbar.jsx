@@ -25,33 +25,52 @@ const Navbar = () => {
       <img src={navbarIcons.growMore} alt="" className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
-          <Link onClick={()=>{navigate('/')}} spy={true} smooth={true} offset={-100} duration={500}>
+          <Link
+            onClick={() => {
+              navigate("/");
+            }}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link onClick={()=>{navigate('/whatwedo')}} smooth={true} offset={0} duration={500}>
-            WhatWeDo
-          </Link>
-        </li>
-        <li>
-          <Link onClick={()=>{navigate('/whyourservices')}} smooth={true} offset={0} duration={500}>
-            WhyOurServices
-          </Link>
-        </li>
-        <li>
-          <Link  onClick={()=>{navigate('/contactus')}} smooth={true} offset={0} duration={500}>
+          <Link
+            onClick={() => {
+              navigate("/contactus");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
             Contact
           </Link>
         </li>
         <li>
-          <Link  onClick={()=>{navigate('/internship')}} smooth={true} offset={0} duration={500}>
-          Internships
+          <Link
+            onClick={() => {
+              navigate("/carriers");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Carriers
           </Link>
         </li>
         <li>
-          <Link  onClick={()=>{navigate('/reviews')}} smooth={true} offset={0} duration={500}>
-          Testimonial
+          <Link
+            onClick={() => {
+              navigate("/whatwedo");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            About
           </Link>
         </li>
       </ul>

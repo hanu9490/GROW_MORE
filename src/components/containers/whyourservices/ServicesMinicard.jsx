@@ -11,4 +11,5 @@ const ServicesMinicard = ({ data }) => {
   );
 };
 
+
 export default ServicesMinicard;
