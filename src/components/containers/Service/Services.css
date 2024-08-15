@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-top: 6%;
+    display: flex;
+    background-image: url("../../../assets//icons/Services/serviceLanding.jpg");
+    background-size: cover;
+    height: 63vh;
+    width: 100%;
+}
+
+.container-overLayer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0a0852;
+    background-size: cover;
+    height: 63vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.lander-header {
+    color: #fcfcfc;
+    font-size: 3rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    padding-top: 6%;
+}
+
+.breadcrumb {
+    color: #eeeaeae4;
+    font-size: 1.25rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+}
+
+.service-header {
+    color: #0D1741;
+    font-size: 2.2rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    padding-top: 6%;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.service-description {
+    color: #8d9392;
+    font-size: 1.1rem;
+    font-family: "Mulish", sans-serif;
+    padding-top: 41px;
+    text-align: center;
+    padding: 10px 60px 30px 60px;
+}
+
+.service-card {
+    background: linear-gradient(to bottom, #02B1AF, #00CAAC);
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: calc();
+    padding: 8% 3% 3% 5%;
+    margin-top: 3%;
+}
+
+.service-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40vw;
+}
+
+.service-detail h1 {
+    color: #fafafa;
+    font-size: 2rem;
+    font-family: "Mulish", sans-serif;
+    padding-bottom: 5%;
+}
+
+.service-detail p {
+    color: #fafafa;
+    font-family: "Mulish", sans-serif;
+    line-height: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.service-img-container {
+    width: 45vw;
+    background-size: cover;
+    height: fit-content;
+    margin-left: 6%;
+}
+
+.service-img {
+    height: fit-content;
+    margin-left: 2%;
+    width: 38vw;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.list-container {
+    display: flex;
+}
+
+.list-container div {
+    margin: 30px 15px 10px 15px;
+}
+
+.list-container li {
+    margin: 15px 15px 10px 15px;
+    color: #fcfcfc;
+}
+
+/* {Data science} */
+.service-card-Data-science {
+    /* background-color: #0D1741; */
+    /* background-color: #F5EADD; */
+    /* background-color: linear-g  #F5EADD; */
+    background: linear-gradient(to bottom, #F5EADD, #D8D8D8);
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: calc();
+    padding: 8% 3% 3% 5%;
+}
+
+.service-card-Data-science-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40vw;
+}
+
+.service-card-Data-science-detail h1 {
+    color: #131313;
+    font-size: 2rem;
+    font-family: "Mulish", sans-serif;
+    padding-bottom: 5%;
+}
+
+.service-card-Data-science-detail p {
+    color: #121111;
+    font-family: "Mulish", sans-serif;
+    line-height: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.Data-science-img-container {
+    width: 45vw;
+    background-size: cover;
+    height: fit-content;
+    margin-left: 2%;
+}
+
+.Data-science-img {
+    height: fit-content;
+    margin-left: 2%;
+    width: 38vw;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.Data-science-list-container {
+    display: flex;
+}
+
+.Data-science-list-container div {
+    margin: 30px 15px 10px 15px;
+}
+
+.Data-science-list-container li {
+    margin: 15px 15px 10px 15px;
+    color: #121111;
+}
+
+
+/* {Mobile Application} */
+.service-card-Mobile-Application {
+    background: linear-gradient(to bottom, #007aff, #085dc5);
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: calc();
+    padding: 8% 3% 3% 5%;
+}
+
+.service-card-Mobile-Application-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40vw;
+}
+
+.service-card-Mobile-Application-detail h1 {
+    color: #f4f4f4;
+    font-size: 2rem;
+    font-family: "Mulish", sans-serif;
+    padding-bottom: 5%;
+}
+
+.service-card-Mobile-Application-detail p {
+    color: #f4f4f4;
+    font-family: "Mulish", sans-serif;
+    line-height: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.Mobile-Application-img-container {
+    width: 45vw;
+    background-size: cover;
+    height: fit-content;
+    margin-left: 6%;
+}
+
+.Mobile-Application-img {
+    height: fit-content;
+    margin-left: 2%;
+    width: 38vw;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.Mobile-Application-list-container {
+    display: flex;
+}
+
+.Mobile-Application-list-container div {
+    margin: 30px 15px 10px 15px;
+}
+
+.Mobile-Application-list-container li {
+    margin: 15px 15px 10px 15px;
+    color: #f4f4f4;
+}
+
+.more-service-containers {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: calc();
+    padding: 8% 3% 3% 5%;
+}
+
+.accordion {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding-top: 2%;
+    background-color:#0D1741;
+}
+
+.BG-total {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 2% 3% 3% 3%;
+}
+
+.Header h1 {
+    font-family: "Mulish", sans-serif;
+    font-size: 35px;
+    color: #dbdbdb;
+    font-weight: 700;
+    padding-top: 3%;
+}
+
+.accordion-first-active {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: #f0f0f0;
+    padding: 25px;
+}
+
+.description-container {
+    padding-left: 40px;
+    padding-right: 20px;
+    width: 55vw;
+}
+
+.description-container h1 {
+    font-family: "Mulish", sans-serif;
+    font-size: 32px;
+    color: #09022e;
+    font-weight: 800;
+}
+
+.description-container p {
+    font-family: "Mulish", sans-serif;
+    font-size: 17px;
+    color: #727172;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+
+.accordion-first {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 2%;
+    margin-top: 2%;
+}
+
+.accordion-img-first {
+    display: flex;
+    object-fit: cover;
+    width: 40vw;
+    height: 35vh;
+    border-radius: 100px;
+    margin-left: 2%;
+}
+
+.accordion-image {
+    width: 50%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: flex;
+}
+
+/* .divider {
+    margin-top: 1%;
+    border-width: 3px;
+} */
+
+.approach-container {
+    display: flex;
+    height: auto;
+    margin: 8% 4% 2% 4%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.approach-container h1 {
+    font-family: "Mulish", sans-serif;
+    font-size: 60px;
+    color: #0D1741;
+    font-weight: 800;
+}
+
+.approach-container p {
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    color: #707070;
+    font-weight: 400;
+    padding-top: 2%;
+
+}
+
+.steps-container {
+    display: flex;
+    height: auto;
+    margin: 8%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    margin: 10px 15px 10px 15px;
+}
+
+.containercard {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5%;
+    background-color: #f5f5f5;
+    width: 45vw;
+    height: 50vh;
+    margin: 1%;
+    transition: background-color 0.6s ease-out;
+    border-radius: 1%;
+}
+
+.containercard:hover {
+    background-color: #131111;
+    /* Background color changes on hover */
+}
+
+.containercard h1 {
+
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    color: #79797b;
+    font-weight: 800;
+    padding-top: 3%;
+}
+
+.containercard h2 {
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    color: #79797b;
+    font-weight: 800;
+}
+
+
+.containercard p {
+    font-family: "Mulish", sans-serif;
+    font-size: 15px;
+    color: #838080;
+    font-weight: 400;
+    padding-top: 3%;
+    /* Smooth transition for text colors */
+}
+
+.containercard:hover h1 {
+    color: #fdfdfd;
+    /* Change h1 color on hover */
+}
+
+.containercard:hover h2 {
+    color: #fdfdfd;
+    /* Change h2 color on hover */
+}
+
+.containercard:hover p {
+    color: #fdfdfd;
+    /* Change paragraph color on hover */
+}
+
+.containercard hr {
+    transition: width 0.6s ease-out, background-color 0.6s ease-out, border-color 0.6s ease-out;
+    /* Smooth transition for hr */
+    width: 8%;
+    height: 2%;
+    background-color: #e10707;
+    margin-top: 4%;
+    border-color: #e10707;
+}
+
+.containercard:hover hr {
+    width: 20%;
+    /* Increase hr width on hover */
+    background-color: #e10707;
+    /* Keep hr background color */
+    border-color: #e10707;
+    /* Keep hr border color */
+}
