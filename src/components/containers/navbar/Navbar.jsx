@@ -37,18 +37,7 @@ const Navbar = () => {
             Home
           </Link>
         </li>
-        <li>
-          <Link
-            onClick={() => {
-              navigate("/contactus");
-            }}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li>
+
         <li>
           <Link
             onClick={() => {
@@ -64,7 +53,31 @@ const Navbar = () => {
         <li>
           <Link
             onClick={() => {
-              navigate("/whatwedo");
+              navigate("/services");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={() => {
+              navigate("/contactus");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={() => {
+              navigate("/about");
             }}
             smooth={true}
             offset={0}
