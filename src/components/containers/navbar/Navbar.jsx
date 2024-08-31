@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { navbarIcons } from "../../../assets/icons/icons";
 import { Link } from "react-scroll";
@@ -40,6 +40,30 @@ const Navbar = () => {
         <li>
           <Link
             onClick={() => {
+              navigate("/whatwedo");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={() => {
+              navigate("/services");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={() => {
               navigate("/contactus");
             }}
             smooth={true}
@@ -51,9 +75,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            onClick={() => {
-              navigate("/carriers");
-            }}
+            onClick={() => { navigate("/carriers") }}
             smooth={true}
             offset={0}
             duration={500}
@@ -61,18 +83,7 @@ const Navbar = () => {
             Carriers
           </Link>
         </li>
-        <li>
-          <Link
-            onClick={() => {
-              navigate("/whatwedo");
-            }}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            About
-          </Link>
-        </li>
+
       </ul>
       <img
         className="menu-icon"
