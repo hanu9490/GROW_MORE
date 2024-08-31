@@ -73,6 +73,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+
         <li>
           <Link
             onClick={() => { navigate("/carriers") }}
@@ -83,7 +84,6 @@ const Navbar = () => {
             Carriers
           </Link>
         </li>
-
       </ul>
       <img
         className="menu-icon"

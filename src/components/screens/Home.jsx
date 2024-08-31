@@ -5,6 +5,7 @@ import WhyOurServices from "../containers/whyourservices/WhyOurServices";
 import WhyChooseus from "../containers/whychooseus/WhyChooseus";
 import Footer from "../containers/footer/Footer";
 import Reviews from "../containers/reviews/Reviews";
+import ScrollButton from "../common/ScrollToTop/ScrollUp";
 
 const Home = () => {
   return (
@@ -14,8 +15,9 @@ const Home = () => {
       <WhatWeDo />
       <WhyOurServices />
       <WhyChooseus />
-      <Reviews/>
+      <Reviews />
       <Footer />
+      <ScrollButton />
     </div>
   );
 };
