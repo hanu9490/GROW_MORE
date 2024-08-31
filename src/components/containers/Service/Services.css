@@ -267,7 +267,7 @@
     height: auto;
     flex-direction: column;
     padding-top: 2%;
-    background-color:#0D1741;
+    background-color:hsl(0, 0%, 100%);
 }
 
 .BG-total {
@@ -288,7 +288,7 @@
 .Header h1 {
     font-family: "Mulish", sans-serif;
     font-size: 35px;
-    color: #dbdbdb;
+    color: #0D1741;
     font-weight: 700;
     padding-top: 3%;
 }

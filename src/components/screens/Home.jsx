@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../containers/hero/Hero";
 import OurTechnology from "../containers/our-technology/OurTechnology";
 import WhatWeDo from "../containers/whatwedo/WhatWeDo";
