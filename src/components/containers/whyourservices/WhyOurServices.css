@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 120px;
 }
 
 .our-services-inner {
@@ -82,7 +82,7 @@
     height: 100%;
     width: 100%;
   }
-  
+
   .img-con {
     height: 350px;
   }

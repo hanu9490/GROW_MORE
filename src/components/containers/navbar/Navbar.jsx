@@ -47,7 +47,7 @@ const Navbar = () => {
             offset={0}
             duration={500}
           >
-            Carriers
+            Carrers
           </Link>
         </li>
         <li>
