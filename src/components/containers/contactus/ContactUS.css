@@ -12,6 +12,7 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-top: 80px;
+  font-family: "Poppins";
 }
 
 .contact-us-container {
@@ -102,6 +103,11 @@
   flex-direction: column;
   width: 45%;
   margin-right: 50px;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 @media (max-width: 1250px) {
@@ -204,120 +210,3 @@
   }
 }
 
-.background {
-  height: auto;
-  margin-top: 6%;
-
-}
-
-
-.landing-element {
-  fill: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 6%;
-  padding: 15px;
-}
-
-.landing-element h1 {
-  padding-top: 4%;
-  height: 30vh;
-  font-family: "Mulish", sans-serif;
-  font-size: 50px;
-}
-
-.svg-element {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: -2%;
-}
-
-.svg-element svg {
-  fill: aqua;
-  width: 60vw;
-}
-
-.svg-element p {
-  width: 30vw;
-  padding-left: 20px;
-  font-family: "Mulish", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #737373;
-}
-
-.form-element {
-  height: 150vh;
-  margin-top: 3%;
-  background-color: #c5c4c4;
-  padding: 0% 0% 0% 2%;
-}
-
-.contact-details {
-  width: 50vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-details h1 {
-  padding: 5% 0% 2% 3%;
-  font-family: "Mulish", sans-serif;
-  font-size: 30px;
-}
-
-.contact-details p {
-  padding: 1% 0% 2% 3%;
-  font-family: "Mulish", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.form-details {
-  width: 50vw;
-}
-
-.details-element {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.details-element {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.icons {
-  background-color: #bababa;
-  height: 50px;
-  width: 50px;
-  border-radius: 30px;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 20px;
-  width: 100%;
-}
-
-.details p {
-  padding: 0% 0% 1% 2%;
-  font-family: "Mulish", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.details h1 {
-  padding: 0% 0% 1% 2%;
-  font-family: "Mulish", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-}
