@@ -32,7 +32,8 @@ import growMore from "./navbarIcons/grow-more.png";
 import menuIcon from "./navbarIcons/menu-icon.png";
 
 //testimonials assets imports
-import hanuClientimg from "./testimonials/Hanumanthu-Profile.png" 
+import hanuClientimg from "./testimonials/Hanumanthu-Profile.png";
+import UserIcon from "./testimonials/user-img.jpg";
 
 export const whyOurServicesIcons = {
   Rectangle17,
@@ -74,4 +75,5 @@ export const navbarIcons = {
 
 export const testimonialsImg = {
   hanuClientimg,
-}
+  UserIcon,
+};

@@ -6,6 +6,8 @@ import Carriers from "../components/screens/Carriers";
 import Contact from "../components/screens/Contact";
 import Services from "../components/screens/Services";
 import NotFound from "../components/common/NotFound/NotFound";
+import ApplyJob from "../components/containers/internship/ApplyJob";
+import About from "../components/screens/About";
 import { useLocation } from "react-router-dom";
 import Footer from "../components/containers/footer/Footer"
 const ScrollToTop = () => {
@@ -22,9 +24,11 @@ const routes = (
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
-      <Route path="/carriers" element={<Carriers />} />
+      <Route path="/careers" element={<Carriers />} />
       <Route path="/contactus" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/apply/:jobTitle" element={<ApplyJob />} />
     </Routes>
     <Footer />
   </React.Fragment>
