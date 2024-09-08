@@ -2,29 +2,43 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { navbarIcons } from "../../../assets/icons/icons";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
+  // Define the scroll handler function
+  const handleScroll = () => {
+    window.scrollY > 50 ? setSticky(true) : setSticky(false);
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    });
-    return () => window.removeEventListener("scroll");
+    // Add the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const toggleMenu = () => {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
   };
 
+  // Function to check if the current route is active
+  const isActiveRoute = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav className={`nav-container ${sticky ? "dark-nav" : "light-nav"}`}>
-      <img src={navbarIcons.growMore} alt="" className="logo" />
+      <img src={navbarIcons.growMore} alt="Grow More" className="logo" />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
-        <li>
+        <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
               navigate("/");
@@ -38,19 +52,20 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li>
+        <li className={isActiveRoute("/careers") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/carriers");
+              navigate("/careers");
             }}
             smooth={true}
             offset={0}
             duration={500}
           >
-            Carrers
+            Careers
           </Link>
         </li>
-        <li>
+
+        <li className={isActiveRoute("/services") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
               navigate("/services");
@@ -62,7 +77,8 @@ const Navbar = () => {
             Services
           </Link>
         </li>
-        <li>
+
+        <li className={isActiveRoute("/contactus") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
               navigate("/contactus");
@@ -74,7 +90,8 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li>
+
+        <li className={isActiveRoute("/about") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
               navigate("/about");

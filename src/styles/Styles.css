@@ -151,6 +151,7 @@
   /* align-items: center; */
   margin-top: 20px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .features-of-internship-container .menu-items .item {
@@ -186,7 +187,7 @@
 .features-of-internship-container .menu-items .item .heading2 {
   font-size: 18px;
   color: #637381;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 @media (max-width: 600px) {

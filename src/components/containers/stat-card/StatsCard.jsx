@@ -10,24 +10,24 @@ const StatsCard = () => {
 
   const yearsProps = useSpring({
     from: { number: 0 },
-    to: { number: inView ? 7 : 0 },
+    to: { number: inView ? 4 : 0 },
     config: { duration: 2000 },
   });
 
   const employeesProps = useSpring({
     from: { number: 0 },
-    to: { number: inView ? 759 : 0 },
+    to: { number: inView ? 100 : 0 },
     config: { duration: 2000 },
   });
   const projectsProps = useSpring({
     from: { number: 0 },
-    to: { number: inView ? 456 : 0 },
+    to: { number: inView ? 50 : 0 },
     config: { duration: 2000 },
   });
 
   const clientsProps = useSpring({
     from: { number: 0 },
-    to: { number: inView ? 789 : 0 },
+    to: { number: inView ? 110 : 0 },
     config: { duration: 2000 },
   });
   return (

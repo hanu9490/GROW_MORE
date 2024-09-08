@@ -12,7 +12,7 @@
   padding: 50px;
 }
 
-.why-choose-img-con{
+.why-choose-img-con {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,24 +38,28 @@
   max-width: 55%;
   margin-left: 50px;
   flex-basis: content;
-  margin-left:25px;
+  margin-left: 25px;
 }
 
 .why-chooseus-text-con h2 {
   font-size: 18px;
   font-weight: 0px;
   margin: 0px 0px 5px 0px;
+  font-family: "Poppins-semi-bold";
 }
 
 .why-chooseus-text-con h1 {
   font-size: 23px;
   font-weight: 600;
   margin: 0px 0px 5px 0px;
+  font-family: "Poppins-semi-bold";
 }
 
 .why-chooseus-text-con p {
   font-size: 14px;
   margin: 5px 0px 15px 0px;
+  font-family: "Poppins";
+
   /* width: 95%; */
 }
 
@@ -66,13 +70,13 @@
 
 /* -------------------------- Media Query for Mid Level Screens ---------------------- */
 
-@media (max-width:1000px){
+@media (max-width: 1000px) {
   .why-chooseus-text-con h2 {
     font-size: 16px;
     font-weight: 0px;
     margin: 0px 0px 5px 0px;
   }
-  
+
   .why-choose-img-con img {
     max-width: 350px;
     max-height: 450px;
@@ -92,22 +96,20 @@
   }
 }
 
-
 /* -------------------------- Media Query for Mobile Screens ---------------------- */
 
-@media (max-width:800px){
-  .why-chooseus-inner{
+@media (max-width: 800px) {
+  .why-chooseus-inner {
     display: flex;
     flex-direction: column;
     padding: 25px;
   }
 
-
   .why-chooseus-text-con {
     max-width: 100%;
     margin-left: 50px;
     flex-basis: content;
-    margin-left:25px;
+    margin-left: 25px;
     padding: 10px;
     margin: 0px;
   }

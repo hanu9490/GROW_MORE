@@ -9,6 +9,10 @@
   box-sizing: border-box;
   border: 1px solid #3056d3 !important;
 }
+.job-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #3056d3 !important;
+}
 
 .job-title {
   color: #3056d3;
@@ -49,6 +53,18 @@
 .apply-button:hover {
   background-color: #3056d3;
   color: #fff;
+}
+
+.closed-button {
+  width: 50%;
+  padding: 10px;
+  color: red;
+  border: 1px solid #3056d3;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: not-allowed;
+  text-align: center;
+  background-color: #fff;
 }
 
 @media (max-width: 600px) {
