@@ -1,9 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { contactUsIcons } from "../../../assets/icons/icons";
-// import { RiMessage2Line } from "react-icons/ri";
 import "./ContactUS.css";
 
 const ContactUs = () => {
+  // State to store form input values
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // State to store form validation errors
+  const [errors, setErrors] = useState({});
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Validate form inputs
+  const validate = () => {
+    let formErrors = {};
+
+    if (!formData.name.trim()) {
+      formErrors.name = "Name is required";
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      formErrors.email = "Email is required";
+    } else if (!emailRegex.test(formData.email)) {
+      formErrors.email = "Invalid email address";
+    }
+
+    if (!formData.message.trim()) {
+      formErrors.message = "Message is required";
+    }
+
+    return formErrors;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate the form
+    const formErrors = validate();
+    setErrors(formErrors);
+
+    if (Object.keys(formErrors).length === 0) {
+      // If no errors, log the form data
+      console.log("Form Data:", formData);
+
+      // Optionally clear the form after submission
+      setFormData({ name: "", email: "", message: "" });
+    }
+  };
+
   return (
     <div className="contactus-main-container" id="contact">
       <div className="contact-us-container">
@@ -50,10 +104,46 @@ const ContactUs = () => {
       </div>
       <div className="contactus-input-container">
         <h1 className="input-heading">Contact Form</h1>
-        <input placeholder="Enter your Name" type="text" />
-        <input placeholder="Enter your Email" type="email" />
-        <textarea placeholder="Type Your Message Here"></textarea>
-        <button className="submit-btn">Submit</button>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              placeholder="Enter your Name"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {errors.name && (
+              <span className="error-message">{errors.name}</span>
+            )}
+          </div>
+          <div className="form-group">
+            <input
+              placeholder="Enter your Email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <span className="error-message">{errors.email}</span>
+            )}
+          </div>
+          <div className="form-group">
+            <textarea
+              placeholder="Type Your Message Here"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+            {errors.message && (
+              <span className="error-message">{errors.message}</span>
+            )}
+          </div>
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );

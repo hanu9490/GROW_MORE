@@ -12,6 +12,7 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-top: 80px;
+  font-family: "Poppins";
 }
 
 .contact-us-container {
@@ -101,6 +102,11 @@
   flex-direction: column;
   width: 45%;
   margin-right: 50px;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 @media (max-width: 1250px) {
@@ -201,4 +207,3 @@
     justify-content: space-between;
   }
 }
-
