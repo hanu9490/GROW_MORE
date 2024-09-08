@@ -33,6 +33,10 @@ const Navbar = () => {
   const isActiveRoute = (path) => {
     return location.pathname === path;
   };
+  const handleNavigation = (path) => {
+    navigate(path);
+    setMobileMenu(false);
+  };
 
   return (
     <nav className={`nav-container ${sticky ? "dark-nav" : "light-nav"}`}>
@@ -49,7 +53,7 @@ const Navbar = () => {
         <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/");
+              handleNavigation("/");
             }}
             spy={true}
             smooth={true}
@@ -63,7 +67,7 @@ const Navbar = () => {
         <li className={isActiveRoute("/careers") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/careers");
+              handleNavigation("/careers");
             }}
             smooth={true}
             offset={0}
@@ -76,7 +80,7 @@ const Navbar = () => {
         <li className={isActiveRoute("/services") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/services");
+              handleNavigation("/services");
             }}
             smooth={true}
             offset={0}
@@ -89,7 +93,7 @@ const Navbar = () => {
         <li className={isActiveRoute("/contactus") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/contactus");
+              handleNavigation("/contactus");
             }}
             smooth={true}
             offset={0}
@@ -102,7 +106,7 @@ const Navbar = () => {
         <li className={isActiveRoute("/about") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/about");
+              handleNavigation("/about");
             }}
             smooth={true}
             offset={0}

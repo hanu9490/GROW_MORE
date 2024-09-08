@@ -47,10 +47,10 @@ const ContactUs = () => {
       // Send email via emailjs
       emailjs
         .send(
-          "your_service_id", // Replace with your service ID
-          "your_template_id", // Replace with your template ID
+          "buehjyl", // Replace with your service ID
+          "j7s28fh", // Replace with your template ID
           formData,
-          "your_user_id" // Replace with your user ID
+          "bN1KiPV45vYoY_gvHd74Q" // Replace with your user ID
         )
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
