@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { navbarIcons } from "../../../assets/icons/icons";
 import { Link } from "react-scroll";
@@ -60,16 +60,16 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li>
+        <li className={isActiveRoute("/careers") ? "active-nav-item" : ""}>
           <Link
             onClick={() => {
-              navigate("/carriers");
+              navigate("/careers");
             }}
             smooth={true}
             offset={0}
             duration={500}
           >
-            Carriers
+            Careers
           </Link>
         </li>
 
@@ -98,14 +98,17 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li>
+
+        <li className={isActiveRoute("/about") ? "active-nav-item" : ""}>
           <Link
-            onClick={() => { navigate("/carriers") }}
+            onClick={() => {
+              navigate("/about");
+            }}
             smooth={true}
             offset={0}
             duration={500}
           >
-            Carriers
+            About
           </Link>
         </li>
       </ul>
