@@ -20,6 +20,7 @@ nav {
 
 .logo {
   width: 100px;
+  cursor: pointer;
 }
 
 nav ul li {

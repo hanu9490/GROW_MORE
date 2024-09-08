@@ -36,7 +36,12 @@ const Navbar = () => {
 
   return (
     <nav className={`nav-container ${sticky ? "dark-nav" : "light-nav"}`}>
-      <img src={navbarIcons.growMore} alt="Grow More" className="logo" />
+      <img
+        src={navbarIcons.growMore}
+        alt="Grow More"
+        className="logo"
+        onClick={() => navigate("/")}
+      />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
           <Link
