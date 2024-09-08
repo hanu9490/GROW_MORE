@@ -10,42 +10,42 @@ const WhatWeDo = () => {
       heading: "App Development",
       paragraph:
         "We specialize in creating powerful and user-friendly mobile applications tailored to your business needs.",
-      link: "#",
+      link: "services",
     },
     {
       image: DataAnalysisCardCoverImage,
       heading: "Data Science Solutions",
       paragraph:
         "Leverage data-driven insights with our advanced data science services to enhance decision-making and strategy.",
-      link: "#",
+      link: "services",
     },
     {
       image: WebDevCardCoverImage,
       heading: "Website Development",
       paragraph:
         "We build responsive and visually appealing websites that deliver an excellent user experience across all devices.",
-      link: "#",
+      link: "services",
     },
     {
       image: DataAnalysisCardCoverImage,
       heading: "Application Deployment",
       paragraph:
         "Our deployment services ensure that your applications are efficiently and securely launched into production environments.",
-      link: "#",
+      link: "services",
     },
     {
       image: WebDevCardCoverImage,
       heading: "Application Maintenance",
       paragraph:
         "We offer reliable application maintenance services to keep your software updated, secure, and running smoothly.",
-      link: "#",
+      link: "services",
     },
     {
       image: DataAnalysisCardCoverImage,
       heading: "IT Consultancy",
       paragraph:
         "Our expert IT consultants provide guidance on optimizing your technology infrastructure and achieving business goals.",
-      link: "#",
+      link: "services",
     },
   ];
 

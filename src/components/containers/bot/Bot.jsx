@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ChatBot from "react-simple-chatbot";
 import "./Bot.css";
 import { ThemeProvider } from "styled-components";
-import ChatIcon from "@mui/icons-material/Chat"; // Import your icon
+import ChatIcon from "@mui/icons-material/Chat";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 const Bot = () => {
   // State to toggle chatbot visibility
@@ -154,7 +155,7 @@ const Bot = () => {
       {/* Toggle Button */}
       {!isBotVisible && (
         <button onClick={toggleBot} className="chat-button">
-          <ChatIcon />
+          <SmartToyIcon />
         </button>
       )}
 

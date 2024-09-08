@@ -27,11 +27,13 @@
   font-size: 2em;
   margin: 0;
   font-family: "Poppins";
+  color: #212ea0;
 }
 .what-we-do-card-heading2 {
   font-size: 2em;
   margin: 0;
   font-family: "Poppins-bold";
+  color: #212ea0;
 }
 .what-we-do-card-container {
   display: grid;
@@ -63,7 +65,7 @@
 }
 
 .card-image {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: filter 0.3s ease;
 }
 
@@ -343,6 +345,13 @@
           text-align: left;
           width: fit-content;
         }
+        .name {
+          font-family: "Poppins-semi-bold";
+          font-size: 22px;
+          color: #3056d3;
+          text-align: left;
+          cursor: pointer;
+        }
         .skills {
           font-family: "Poppins";
           font-size: 14px;
@@ -368,101 +377,74 @@
       }
       .linkedIn :hover {
         color: #3056d3;
-
         cursor: pointer;
       }
+      .name:hover {
+        color: #3056d3;
+        cursor: pointer;
+        text-decoration: underline;
+        opacity: 0.8;
+      }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .our-team-container {
-    .leaders-container {
-      .leaders-content {
-        padding: 20px 20px;
-      }
-      .leaders {
-        .leader {
+  @media screen and (max-width: 768px) {
+    .our-team-container {
+      .leaders-container {
+        .leaders-content {
           padding: 20px 20px;
-          .img {
-            width: 80px;
-            height: 80px;
-          }
-          .leader-info {
-            font-size: 18px;
-          }
-          .skills {
-            font-size: 12px;
-            width: 300px;
-          }
-          .leader-desig {
-            font-size: 18px;
-          }
-          .linkedIn {
-            font-size: 18px;
+        }
+        .leaders {
+          .leader {
+            padding: 20px 20px;
+            .img {
+              width: 80px;
+              height: 80px;
+            }
+            .leader-info {
+              font-size: 18px;
+            }
+            .skills {
+              font-size: 12px;
+              width: 300px;
+            }
+            .leader-desig {
+              font-size: 18px;
+            }
+            .linkedIn {
+              font-size: 18px;
+            }
           }
         }
       }
     }
   }
-}
-@media screen and (max-width: 480px) {
-  .our-team-container {
-    .leaders-container {
-      .leaders-content {
-        padding: 20px 20px;
-      }
-      .leaders {
-        .leader {
+  @media screen and (max-width: 480px) {
+    .our-team-container {
+      .leaders-container {
+        .leaders-content {
           padding: 20px 20px;
-          .img {
-            width: 80px;
-            height: 80px;
-          }
-          .leader-info {
-            font-size: 16px;
-          }
-          .skills {
-            font-size: 10px;
-            width: 220px;
-          }
-          .leader-desig {
-            font-size: 16px;
-          }
-          .linkedIn {
-            font-size: 16px;
-          }
         }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .our-team-container {
-    .leaders-container {
-      .leaders-content {
-        padding: 20px 20px;
-      }
-      .leaders {
-        .leader {
-          padding: 20px 20px;
-          .img {
-            width: 70px;
-            height: 70px;
-          }
-          .leader-info {
-            font-size: 14px;
-          }
-          .skills {
-            font-size: 8px;
-            width: 150px;
-          }
-          .leader-desig {
-            font-size: 14px;
-          }
-          .linkedIn {
-            font-size: 14px;
+        .leaders {
+          .leader {
+            padding: 20px 20px;
+            .img {
+              width: 80px;
+              height: 80px;
+            }
+            .leader-info {
+              font-size: 16px;
+            }
+            .skills {
+              font-size: 10px;
+              width: 180px;
+            }
+            .leader-desig {
+              font-size: 16px;
+            }
+            .linkedIn {
+              font-size: 16px;
+            }
           }
         }
       }

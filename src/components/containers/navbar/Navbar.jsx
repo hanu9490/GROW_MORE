@@ -40,7 +40,10 @@ const Navbar = () => {
         src={navbarIcons.growMore}
         alt="Grow More"
         className="logo"
-        onClick={() => navigate("/")}
+        onClick={() => {
+          navigate("/");
+          window.scroll(0, 0);
+        }}
       />
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
