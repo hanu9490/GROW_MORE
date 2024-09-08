@@ -7,7 +7,7 @@ import Contact from "../components/screens/Contact";
 import Services from "../components/screens/Services";
 import NotFound from "../components/common/NotFound/NotFound";
 import { useLocation } from "react-router-dom";
-
+import Footer from "../components/containers/footer/Footer"
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -26,6 +26,7 @@ const routes = (
       <Route path="/contactus" element={<Contact />} />
       <Route path="/services" element={<Services />} />
     </Routes>
+    <Footer />
   </React.Fragment>
 );
 export default routes;

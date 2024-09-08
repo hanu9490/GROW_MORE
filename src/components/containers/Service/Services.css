@@ -38,7 +38,7 @@
 
 .breadcrumb {
   color: #eeeaeae4;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "Mulish", sans-serif;
   font-weight: 600;
 }
@@ -48,7 +48,7 @@
   font-size: 2.2rem;
   font-family: "Mulish", sans-serif;
   font-weight: 900;
-  padding-top: 6%;
+  padding-top: 4%;
   text-align: center;
   padding-left: 60px;
 }
@@ -57,9 +57,8 @@
   color: #8d9392;
   font-size: 1.1rem;
   font-family: "Mulish", sans-serif;
-  padding-top: 41px;
   text-align: center;
-  padding: 10px 60px 30px 60px;
+  padding: 2% 10% 2% 10%;
 }
 
 .service-card {
@@ -355,7 +354,7 @@
     height: auto;
     flex-direction: column;
     padding-top: 2%;
-    background-color:#0D1741;
+    background-color:#fdfdfd;
 }
 
 .BG-total {
@@ -376,7 +375,7 @@
 .Header h1 {
     font-family: "Mulish", sans-serif;
     font-size: 35px;
-    color: #dbdbdb;
+    color: #0D1741;
     font-weight: 700;
     padding-top: 3%;
 }
@@ -455,17 +454,18 @@
 
 .approach-container h1 {
   font-family: "Mulish", sans-serif;
-  font-size: 60px;
-  color: #0d1741;
+  font-size:3rem;
+  color: #0D1741;
   font-weight: 800;
+  padding:0% 6% 1% 6%;
 }
 
 .approach-container p {
   font-family: "Mulish", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   color: #707070;
-  font-weight: 400;
-  padding-top: 2%;
+  font-weight: 500;
+  padding: 2% 4% 2% 6%;
 }
 
 .steps-container {

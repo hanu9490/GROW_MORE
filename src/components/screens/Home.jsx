@@ -3,7 +3,7 @@ import OurTechnology from "../containers/our-technology/OurTechnology";
 import WhatWeDo from "../containers/whatwedo/WhatWeDo";
 import WhyOurServices from "../containers/whyourservices/WhyOurServices";
 import WhyChooseus from "../containers/whychooseus/WhyChooseus";
-import Footer from "../containers/footer/Footer";
+// import Footer from "../containers/footer/Footer";
 import Reviews from "../containers/reviews/Reviews";
 import ScrollButton from "../common/ScrollToTop/ScrollUp";
 
@@ -16,7 +16,7 @@ const Home = () => {
       <WhyOurServices />
       <WhyChooseus />
       <Reviews />
-      <Footer />
+      {/* <Footer /> */}
       <ScrollButton />
     </div>
   );
