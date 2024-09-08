@@ -6,7 +6,8 @@
 
 .testimonial-title {
   font-size: 1.5em;
-  font-weight: bold;
+  color: #212ea0;
+  font-family: "Poppins-Bold";
 }
 
 .swiper {
@@ -68,6 +69,12 @@
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 6px;
+  color: #3056d3;
+  cursor: pointer;
+  font-family: "Poppins-semi-bold";
+}
+.testimonial-name:hover {
+  opacity: 0.8;
 }
 
 .testimonial-position {

@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const StatsCard = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Change this to false if you want the animation to restart every time it comes into view
+    triggerOnce: true,
   });
 
   const yearsProps = useSpring({
@@ -47,7 +47,16 @@ const StatsCard = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Box textAlign="center">
             <Typography variant="h6">Years of Experience</Typography>
-            <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: "bold",
+                color: "#3056d3",
+                "&:hover": {
+                  opacity: 0.8,
+                },
+              }}
+            >
               <animated.span>
                 {yearsProps.number.to((n) => `${Math.floor(n)}+`)}
               </animated.span>
@@ -57,7 +66,16 @@ const StatsCard = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Box textAlign="center">
             <Typography variant="h6">Employees</Typography>
-            <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: "bold",
+                color: "#3056d3",
+                "&:hover": {
+                  opacity: 0.8,
+                },
+              }}
+            >
               <animated.span>
                 {employeesProps.number.to((n) => `${Math.floor(n)}+`)}
               </animated.span>
@@ -67,7 +85,16 @@ const StatsCard = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Box textAlign="center">
             <Typography variant="h6">Projects</Typography>
-            <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: "bold",
+                color: "#3056d3",
+                "&:hover": {
+                  opacity: 0.8,
+                },
+              }}
+            >
               <animated.span>
                 {projectsProps.number.to((n) => `${Math.floor(n)}+`)}
               </animated.span>
@@ -77,7 +104,16 @@ const StatsCard = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Box textAlign="center">
             <Typography variant="h6">Clients</Typography>
-            <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: "bold",
+                color: "#3056d3",
+                "&:hover": {
+                  opacity: 0.8,
+                },
+              }}
+            >
               <animated.span>
                 {clientsProps.number.to((n) => `${Math.floor(n)}+`)}
               </animated.span>

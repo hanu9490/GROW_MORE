@@ -46,6 +46,7 @@ const OurTeam = () => {
     <div className="our-team-container">
       <div className="h1">{heading1}</div>
       <div className="h2">"{heading2}"</div>
+      <div className="h2">-Ralph Waldo Emerson</div>
       <div className="leaders-container">
         <div className="leaders-content">
           {heading3.map((item, index) => (
@@ -59,7 +60,12 @@ const OurTeam = () => {
                 <img className="img" src={leader.image} alt={leader.name} />
               </div>
               <div className="leader-info">
-                <div className="name">{leader.name}</div>
+                <div
+                  className="name"
+                  onClick={() => window.open(leader.link, "_blank")}
+                >
+                  {leader.name}
+                </div>
                 <div className="skills">
                   <span>{leader.skillSet}</span>
                 </div>
