@@ -1,6 +1,6 @@
-import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import {ourTeam} from "../../../assets/icons/icons"
 const OurTeam = () => {
   let heading1 = "Our Team";
   let heading2 =
@@ -14,7 +14,7 @@ const OurTeam = () => {
     {
       name: "Sreedhar Rongala",
       position: "Founder & CEO",
-      image: "https://via.placeholder.com/150",
+      image: ourTeam.sree,
       skillSet:
         "Leading the company, Business Development, Data Scientist, Management",
       link: "https://www.linkedin.com/in/sreedhar-rongala",
@@ -22,7 +22,7 @@ const OurTeam = () => {
     {
       name: "SaiKumar Navara",
       position: "Founder",
-      image: "https://via.placeholder.com/150",
+      image: ourTeam.sai,
       skillSet:
         "Leading the company, Web Applications and Mobile Applications Development",
       link: "https://www.linkedin.com/in/saikumarnavara",
@@ -37,7 +37,7 @@ const OurTeam = () => {
     {
       name: "Harish jammu",
       position: "Co-founder",
-      image: "https://via.placeholder.com/150",
+      image: ourTeam.harish4,
       skillSet: "APP/Web Development Maintance, UI/UX Designer",
       link: "https://www.linkedin.com/in/harishjammu",
     },
@@ -45,7 +45,7 @@ const OurTeam = () => {
   return (
     <div className="our-team-container">
       <div className="h1">{heading1}</div>
-      <div className="h2">"{heading2}"</div>
+      <div className="h2">{heading2}</div>
       <div className="h2">-Ralph Waldo Emerson</div>
       <div className="leaders-container">
         <div className="leaders-content">

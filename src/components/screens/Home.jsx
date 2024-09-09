@@ -7,6 +7,7 @@ import WhyChooseus from "../containers/whychooseus/WhyChooseus";
 import Reviews from "../containers/reviews/Reviews";
 import ScrollButton from "../common/ScrollToTop/ScrollUp";
 import StatsCard from "../containers/stat-card/StatsCard";
+import OurTeam from "../containers/ourteam/OurTeam";
 const Home = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Home = () => {
       <WhyChooseus />
       <StatsCard />
       <Reviews />
+      <OurTeam />
       {/* <Footer /> */}
       <ScrollButton />
     </div>
