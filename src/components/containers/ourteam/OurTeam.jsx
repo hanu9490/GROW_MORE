@@ -30,7 +30,7 @@ const OurTeam = () => {
     {
       name: "Hanumanthu Pyla",
       position: "Co-founder",
-      image: "https://via.placeholder.com/150",
+      image: ourTeam.hj,
       skillSet: "APP/Web Development Maintance, Management, Architect",
       link: "https://www.linkedin.com/in/hanumanthu-pyla",
     },

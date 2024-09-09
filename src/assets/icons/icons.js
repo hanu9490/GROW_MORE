@@ -43,6 +43,7 @@ import harish4 from "./ourTeam/h5.jpg";
 import sree from "./ourTeam/sree.jpg";
 import sree1 from "./ourTeam/sree2.jpg";
 import sai from "./ourTeam/sai.jpg";
+import hj from "./ourTeam/hj.jpg";
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -86,5 +87,5 @@ export const testimonialsImg = {
   UserIcon,
 };
 export const ourTeam = {
- harish,harish1,harish3,harish2,harish4, sree,sree1,sai
+ harish,harish1,harish3,harish2,harish4, sree,sree1,sai,hj
 };
