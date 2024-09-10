@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ChatBot from "react-simple-chatbot";
 import "./Bot.css";
 import { ThemeProvider } from "styled-components";
 import ChatIcon from "@mui/icons-material/Chat";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
+import { Tooltip } from "@mui/material";
 
 const Bot = () => {
   // State to toggle chatbot visibility
   const [isBotVisible, setIsBotVisible] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(true);
 
   // State to store user information
   const [userInfo, setUserInfo] = useState({
@@ -16,6 +18,8 @@ const Bot = () => {
     phone: "",
     query: "",
   });
+
+  console.log(userInfo, "userInfo from bot");
 
   // Toggle chatbot visibility
   const toggleBot = () => {
@@ -150,16 +154,56 @@ const Bot = () => {
     cursor: "pointer",
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTooltip(false); // Hide tooltip after 5 seconds
+    }, 5000);
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
   return (
     <div>
-      {/* Toggle Button */}
-      {!isBotVisible && (
-        <button onClick={toggleBot} className="chat-button">
-          <SmartToyIcon />
-        </button>
-      )}
+      <Tooltip
+        title="Welcome to GrowMore Chatbot! Click here to start chatting."
+        placement="left"
+        arrow
+        open={showTooltip}
+        componentsProps={{
+          tooltip: {
+            sx: {
+              bgcolor: "white",
+              color: "black",
+              fontSize: "14px",
+              border: "2px solid #0d1741",
+              padding: "8px",
+              fontFamily: "Poppins",
+              maxWidth: {
+                xs: "150px", // For small screens
+                sm: "180px", // For small to medium screens
+                md: "200px", // For medium to large screens
+                lg: "250px", // For large screens
+              },
+              fontWeight: "600",
+              "@media (max-width: 390px)": {
+                fontSize: "12px", // Adjust font size for smaller screens
+                padding: "6px", // Adjust padding for smaller screens
+              },
+            },
+          },
+        }}
+      >
+        {!isBotVisible && (
+          <button
+            onClick={toggleBot}
+            className="chat-button"
+            data-tip
+            data-for="botTooltip"
+          >
+            <SmartToyIcon />
+          </button>
+        )}
+      </Tooltip>
 
-      {/* Chatbot */}
       {isBotVisible && (
         <div
           style={{

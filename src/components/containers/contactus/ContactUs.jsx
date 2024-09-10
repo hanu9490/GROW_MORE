@@ -1,60 +1,70 @@
-import  { useState } from "react";
+import React, { useState } from "react";
 import { contactUsIcons } from "../../../assets/icons/icons";
 import "./ContactUS.css";
 
 const ContactUs = () => {
-  // State to store form input values
+  // State to manage form input
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // State to store form validation errors
   const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Handle input change
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  // Form validation
+  const validate = () => {
+    let errors = {};
+    if (!formData.name) {
+      errors.name = "Name is required";
+    }
+    if (!formData.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email is invalid";
+    }
+    if (!formData.message) {
+      errors.message = "Message is required";
+    }
+    return errors;
   };
 
-  // Validate form inputs
-  const validate = () => {
-    let formErrors = {};
-
-    if (!formData.name.trim()) {
-      formErrors.name = "Name is required";
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      formErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
-      formErrors.email = "Invalid email address";
-    }
-
-    if (!formData.message.trim()) {
-      formErrors.message = "Message is required";
-    }
-
-    return formErrors;
+  // Handle input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validationErrors = validate();
+    setErrors(validationErrors);
 
-    // Validate the form
-    const formErrors = validate();
-    setErrors(formErrors);
+    if (Object.keys(validationErrors).length === 0) {
+      // Send email via emailjs
+      emailjs
+        .send(
+          "buehjyl", // Replace with your service ID
+          "j7s28fh", // Replace with your template ID
+          formData,
+          "bN1KiPV45vYoY_gvHd74Q" // Replace with your user ID
+        )
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setIsSubmitted(true);
+        })
+        .catch((err) => {
+          console.error("FAILED...", err);
+        });
 
-    if (Object.keys(formErrors).length === 0) {
-      // If no errors, log the form data
-      console.log("Form Data:", formData);
-
-      // Optionally clear the form after submission
-      setFormData({ name: "", email: "", message: "" });
+      // Clear the form
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     }
   };
 
@@ -73,9 +83,6 @@ const ContactUs = () => {
         <p className="description">
           Struggling with IT challenges?{" "}
           <span className="highlight">GrowMore</span> offers a helping hand!
-          Schedule a free consultation to discuss your unique project needs. Our
-          passionate team will collaborate with you to craft solutions that
-          unlock your business potential.
         </p>
         <hr className="divider" />
         <div className="contact-info">
@@ -97,25 +104,22 @@ const ContactUs = () => {
               <img src={contactUsIcons.twitter} alt="Twitter" />
               <img src={contactUsIcons.linkedin} alt="LinkedIn" />
               <img src={contactUsIcons.youtube} alt="YouTube" />
-              <img src={contactUsIcons.facebook} alt="Facebook" />
             </div>
           </div>
         </div>
       </div>
       <div className="contactus-input-container">
         <h1 className="input-heading">Contact Form</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="apply-form">
           <div className="form-group">
             <input
               placeholder="Enter your Name"
               type="text"
               name="name"
               value={formData.name}
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
-            {errors.name && (
-              <span className="error-message">{errors.name}</span>
-            )}
+            {errors.name && <p className="error">{errors.name}</p>}
           </div>
           <div className="form-group">
             <input
@@ -123,26 +127,25 @@ const ContactUs = () => {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
-            {errors.email && (
-              <span className="error-message">{errors.email}</span>
-            )}
+            {errors.email && <p className="error">{errors.email}</p>}
           </div>
           <div className="form-group">
             <textarea
               placeholder="Type Your Message Here"
               name="message"
               value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-            {errors.message && (
-              <span className="error-message">{errors.message}</span>
-            )}
+              onChange={handleInputChange}
+            />
+            {errors.message && <p className="error">{errors.message}</p>}
           </div>
-          <button type="submit" className="submit-btn">
+          <button className="submit-btn" type="submit">
             Submit
           </button>
+          {isSubmitted && (
+            <p className="success-message">Form submitted successfully!</p>
+          )}
         </form>
       </div>
     </div>
