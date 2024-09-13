@@ -35,7 +35,7 @@
 .lander-header {
   color: #fcfcfc;
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-weight: 800;
   padding-top: 6%;
 }
@@ -43,14 +43,14 @@
 .breadcrumb {
   color: #eeeaeae4;
   font-size: 1rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-weight: 600;
 }
 
 .service-header {
   color: #0d1741;
   font-size: 2.2rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-weight: 900;
   padding-top: 4%;
   text-align: center;
@@ -60,7 +60,7 @@
 .service-description {
   color: #8d9392;
   font-size: 1.1rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   text-align: justify;
   padding: 2% 8% 2% 8%;
 }
@@ -173,13 +173,13 @@
 .service-detail h1 {
   color: #fafafa;
   font-size: 2rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   padding-bottom: 5%;
 }
 
 .service-detail p {
   color: #fafafa;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   line-height: 25px;
   font-size: 1rem;
   font-weight: 600;
@@ -216,53 +216,6 @@
   color: #fcfcfc;
 }
 
-/* Responsive styles for mobile devices */
-/* @media screen and (max-width: 768px) {
-  .service-card {
-    flex-direction: column;
-    padding: 5% 3%;
-    margin-top: 5%;
-  }
-
-  .service-detail {
-    width: 100%;
-    margin-bottom: 5%;
-  }
-
-  .service-detail h1 {
-    font-size: 1.5rem;
-  }
-
-  .service-detail p {
-    font-size: 0.9rem;
-    line-height: 22px;
-  }
-
-  .service-img-container {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .service-img {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 10px;
-  }
-
-  .list-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .list-container div {
-    margin: 15px 0;
-  }
-
-  .list-container li {
-    margin: 10px 0;
-  }
-} */
 @media screen and (max-width: 1024px) {
   .service-card {
     padding: 4%;
@@ -275,7 +228,6 @@
   .service-img-container {
     width: 40%;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -291,7 +243,7 @@
   }
 
   .service-img {
-    width: 98%;
+    width: 80%;
     margin-left: 1%;
   }
 
@@ -351,6 +303,35 @@
   }
 }
 
+@media screen and (max-width: 360px) {
+  .service-detail h1 {
+    font-size: 1.2rem;
+  }
+
+  .service-detail p {
+    font-size: 0.8rem;
+    text-align: justify;
+    padding-right: 10px;
+  }
+
+  .list-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .list-container li {
+    font-size: 0.7rem;
+  }
+
+  .list-container div {
+    margin: 10px 7px 10px 7px;
+  }
+
+  .service-img-container {
+    margin-left: 0px;
+  }
+}
+
 /* {Data science} */
 /* Default styles for desktop and larger screens */
 .service-card-Data-science {
@@ -372,13 +353,13 @@
 .service-card-Data-science-detail h1 {
   color: #131313;
   font-size: 2rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   padding-bottom: 5%;
 }
 
 .service-card-Data-science-detail p {
   color: #121111;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   line-height: 25px;
   font-size: 1rem;
   font-weight: 600;
@@ -482,13 +463,13 @@
 .service-card-Mobile-Application-detail h1 {
   color: #f4f4f4;
   font-size: 2rem;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   padding-bottom: 5%;
 }
 
 .service-card-Mobile-Application-detail p {
   color: #f4f4f4;
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   line-height: 25px;
   font-size: 1rem;
   font-weight: 600;
@@ -546,7 +527,7 @@
   }
 
   .Mobile-Application-img-container {
-    width: 100%;
+    width: 80%;
     margin-left: 0;
     order: 2;
   }
@@ -569,7 +550,6 @@
     font-size: 0.7rem;
   }
 }
-
 
 .more-service-containers {
   background-color: #fff;
@@ -605,9 +585,9 @@
 }
 
 .Header h1 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 35px;
-  color: #0D1741;
+  color: #0d1741;
   font-weight: 700;
   padding-top: 3%;
 }
@@ -627,14 +607,14 @@
 }
 
 .description-container h1 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 32px;
   color: #09022e;
   font-weight: 800;
 }
 
 .description-container p {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 17px;
   color: #727172;
   font-weight: 500;
@@ -720,15 +700,15 @@
 }
 
 .approach-container h1 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
-  color: #0D1741;
+  color: #0d1741;
   font-weight: 800;
   padding: 0% 6% 1% 6%;
 }
 
 .approach-container p {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 1.1rem;
   color: #707070;
   font-weight: 500;
@@ -762,7 +742,7 @@
 }
 
 .containercard h1 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 30px;
   color: #79797b;
   font-weight: 800;
@@ -770,14 +750,14 @@
 }
 
 .containercard h2 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 30px;
   color: #79797b;
   font-weight: 800;
 }
 
 .containercard p {
-  font-family: "Mulish", sans-serif;
+  font-family: "Poppins";
   font-size: 15px;
   color: #838080;
   font-weight: 400;
@@ -813,9 +793,9 @@
   }
 
   .approach-container h1 {
-    font-family: "Mulish", sans-serif;
+    font-family: "Poppins";
     font-size: 1.8rem;
-    color: #0D1741;
+    color: #0d1741;
     font-weight: 800;
     padding: 0% 1% 1% 1%;
   }

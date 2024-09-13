@@ -280,7 +280,7 @@
   }
 }
 
-/* our team css code */
+/* Base styles */
 .our-team-container {
   .h1 {
     color: #3056d3;
@@ -304,6 +304,7 @@
     flex-wrap: wrap;
     gap: 20px;
     flex-direction: row;
+
     .leaders-content {
       display: flex;
       justify-content: center;
@@ -316,6 +317,7 @@
       padding: 40px 40px;
       color: #637381;
     }
+
     .leaders {
       display: flex;
       justify-content: center;
@@ -325,6 +327,7 @@
       font-size: 22px;
       font-family: "Poppins-semi-bold";
       padding: 40px 40px;
+
       .leader {
         display: flex;
         justify-content: center;
@@ -333,18 +336,21 @@
         font-size: 22px;
         font-family: "Poppins-semi-bold";
         padding-right: 50px;
+
         .img {
           width: 100px;
           height: 100px;
           border-radius: 50%;
           object-fit: cover;
         }
+
         .leader-info {
           font-family: "Poppins-semi-bold";
           font-size: 22px;
           text-align: left;
           width: fit-content;
         }
+
         .name {
           font-family: "Poppins-semi-bold";
           font-size: 22px;
@@ -352,6 +358,7 @@
           text-align: left;
           cursor: pointer;
         }
+
         .skills {
           font-family: "Poppins";
           font-size: 14px;
@@ -361,12 +368,14 @@
           text-wrap: wrap;
           text-overflow: ellipsis;
         }
+
         .leader-desig {
           font-family: "Poppins";
           font-size: 20px;
           color: #637381;
           text-align: left;
         }
+
         .linkedIn {
           font-family: "Poppins";
           font-size: 20px;
@@ -375,10 +384,12 @@
           cursor: pointer;
         }
       }
-      .linkedIn :hover {
+
+      .linkedIn:hover {
         color: #3056d3;
         cursor: pointer;
       }
+
       .name:hover {
         color: #3056d3;
         cursor: pointer;
@@ -389,29 +400,45 @@
   }
 }
 
+/* Medium screen (768px and below) */
 @media screen and (max-width: 768px) {
   .our-team-container {
     .leaders-container {
+      flex-direction: column;
+      align-items: center;
+
       .leaders-content {
         padding: 20px 20px;
+        max-width: 100%;
       }
+
       .leaders {
+        padding: 20px 20px;
+
         .leader {
           padding: 20px 20px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
           .img {
             width: 80px;
             height: 80px;
           }
+
           .leader-info {
             font-size: 18px;
           }
+
           .skills {
             font-size: 12px;
             width: 300px;
           }
+
           .leader-desig {
             font-size: 18px;
           }
+
           .linkedIn {
             font-size: 18px;
           }
@@ -420,31 +447,107 @@
     }
   }
 }
+
+/* Small screen (480px and below) */
 @media screen and (max-width: 480px) {
   .our-team-container {
+    .h1 {
+      font-size: 20px;
+    }
+    .h2 {
+      font-size: 20px;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
     .leaders-container {
       .leaders-content {
         padding: 10px 10px;
+        max-width: 100%;
       }
+
       .leaders {
+        padding: 10px 10px;
+
         .leader {
-          padding: 20px 20px;
+          padding: 10px 10px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
           .img {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
           }
+
           .leader-info {
             font-size: 16px;
           }
+
           .skills {
-            font-size: 10px;
-            width: 180px;
+            font-size: 12px;
+            width: 240px;
           }
+
           .leader-desig {
             font-size: 16px;
           }
+
           .linkedIn {
             font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Extra small screen (360px and below) */
+@media screen and (max-width: 360px) {
+  .our-team-container {
+    .h1 {
+      font-size: 18px;
+    }
+    .h2 {
+      font-size: 18px;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .leaders-container {
+      .leaders-content {
+        padding: 5px 5px;
+      }
+
+      .leaders {
+        padding: 5px 5px;
+
+        .leader {
+          padding: 10px 10px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          .img {
+            width: 60px;
+            height: 60px;
+          }
+
+          .leader-info {
+            font-size: 14px;
+          }
+
+          .skills {
+            font-size: 10px;
+            width: 200px;
+          }
+
+          .leader-desig {
+            font-size: 14px;
+          }
+
+          .linkedIn {
+            font-size: 14px;
           }
         }
       }
