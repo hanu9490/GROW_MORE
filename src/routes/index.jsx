@@ -9,7 +9,7 @@ import NotFound from "../components/common/NotFound/NotFound";
 import ApplyJob from "../components/containers/internship/ApplyJob";
 import About from "../components/screens/About";
 import { useLocation } from "react-router-dom";
-
+import Footer from "../components/containers/footer/Footer"
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -30,6 +30,7 @@ const routes = (
       <Route path="/about" element={<About />} />
       <Route path="/apply/:jobTitle" element={<ApplyJob />} />
     </Routes>
+    <Footer />
   </React.Fragment>
 );
 export default routes;

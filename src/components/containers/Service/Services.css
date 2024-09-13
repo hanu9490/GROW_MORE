@@ -9,12 +9,14 @@
 }
 
 .container {
-  margin-top: 6%;
+  margin-top: 75px;
   display: flex;
   background-image: url("../../../assets//icons/Services/serviceLanding.jpg");
   background-size: cover;
   height: 63vh;
   width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .container-overLayer {
@@ -26,6 +28,8 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .lander-header {
@@ -38,7 +42,7 @@
 
 .breadcrumb {
   color: #eeeaeae4;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "Mulish", sans-serif;
   font-weight: 600;
 }
@@ -48,18 +52,105 @@
   font-size: 2.2rem;
   font-family: "Mulish", sans-serif;
   font-weight: 900;
-  padding-top: 6%;
+  padding-top: 4%;
   text-align: center;
-  padding-left: 60px;
+  padding-left: 50px;
 }
 
 .service-description {
   color: #8d9392;
   font-size: 1.1rem;
   font-family: "Mulish", sans-serif;
-  padding-top: 41px;
-  text-align: center;
-  padding: 10px 60px 30px 60px;
+  text-align: justify;
+  padding: 2% 8% 2% 8%;
+}
+
+@media (max-width: 1200px) {
+  .lander-header {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .service-header {
+    font-size: 2rem;
+    padding-top: 2%;
+  }
+
+  .service-description {
+    font-size: 1.1rem;
+    padding: 15px 15px;
+  }
+
+  .container {
+    height: 20vh;
+  }
+
+  .lander-header {
+    padding-top: 0%;
+  }
+
+  .container-overLayer {
+    height: 20vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .lander-header {
+    font-size: 1.5rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .service-header {
+    font-size: 1.8rem;
+    padding-left: 30px;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+
+  .container-overLayer {
+    height: 150px;
+  }
+
+  .container {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lander-header {
+    font-size: 1.2rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  .service-header {
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .container-overLayer {
+    height: 150px;
+    background-size: cover;
+  }
+
+  .container {
+    height: 150px;
+    background-size: cover;
+  }
 }
 
 .service-card {
@@ -112,6 +203,8 @@
 
 .list-container {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .list-container div {
@@ -124,7 +217,7 @@
 }
 
 /* Responsive styles for mobile devices */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .service-card {
     flex-direction: column;
     padding: 5% 3%;
@@ -168,6 +261,93 @@
 
   .list-container li {
     margin: 10px 0;
+  }
+} */
+@media screen and (max-width: 1024px) {
+  .service-card {
+    padding: 4%;
+  }
+
+  .service-detail {
+    width: 50%;
+  }
+
+  .service-img-container {
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-detail,
+  .service-img-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-img {
+    width: 98%;
+    margin-left: 1%;
+  }
+
+  .service-detail h1 {
+    font-size: 1.6rem;
+  }
+
+  .service-detail p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .list-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .list-container li {
+    font-size: 0.7rem;
+  }
+
+  .list-container div {
+    margin: 10px 7px 10px 7px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-card {
+    padding: 3%;
+  }
+
+  .service-detail h1 {
+    font-size: 1.4rem;
+  }
+
+  .service-detail p {
+    font-size: 0.85rem;
+    text-align: justify;
+    padding-right: 10px;
+  }
+
+  .list-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .list-container li {
+    font-size: 0.7rem;
+  }
+
+  .list-container div {
+    margin: 10px 7px 10px 7px;
+  }
+
+  .service-img-container {
+    margin-left: 3%;
   }
 }
 
@@ -252,11 +432,14 @@
   .service-card-Data-science-detail p {
     font-size: 0.9rem;
     line-height: 22px;
+    text-align: justify;
+    order: 1;
   }
 
   .Data-science-img-container {
     width: 100%;
     margin-left: 0;
+    order: 2;
   }
 
   .Data-science-img {
@@ -265,16 +448,16 @@
   }
 
   .Data-science-list-container {
-    flex-direction: column;
-    margin-top: 20px;
+    flex-direction: row;
+    order: 2;
   }
 
   .Data-science-list-container div {
-    margin: 10px 0;
+    margin: 0px 10px 10px 15px;
   }
 
   .Data-science-list-container li {
-    margin: 10px 0;
+    font-size: 0.7rem;
   }
 }
 
@@ -340,6 +523,54 @@
   color: #f4f4f4;
 }
 
+@media screen and (max-width: 768px) {
+  .service-card-Mobile-Application {
+    flex-direction: column;
+    padding: 5% 5%;
+  }
+
+  .service-card-Mobile-Application-detail {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .service-card-Mobile-Application-detail h1 {
+    font-size: 1.5rem;
+  }
+
+  .service-card-Mobile-Application-detail p {
+    font-size: 0.9rem;
+    line-height: 22px;
+    text-align: justify;
+    order: 1;
+  }
+
+  .Mobile-Application-img-container {
+    width: 100%;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .Mobile-Application-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .Mobile-Application-list-container {
+    flex-direction: row;
+    order: 2;
+  }
+
+  .Mobile-Application-list-container div {
+    margin: 0px 8px 10px 8px;
+  }
+
+  .Mobile-Application-list-container li {
+    font-size: 0.7rem;
+  }
+}
+
+
 .more-service-containers {
   background-color: #fff;
   height: 100vh;
@@ -355,7 +586,7 @@
   height: auto;
   flex-direction: column;
   padding-top: 2%;
-  background-color: #0d1741;
+  background-color: #fdfdfd;
 }
 
 .BG-total {
@@ -376,7 +607,7 @@
 .Header h1 {
   font-family: "Mulish", sans-serif;
   font-size: 35px;
-  color: #dbdbdb;
+  color: #0D1741;
   font-weight: 700;
   padding-top: 3%;
 }
@@ -440,6 +671,41 @@
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .accordion-first-active {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .description-container {
+    padding-left: 8px;
+    padding-right: 20px;
+    width: 100vw;
+  }
+
+  .description-container h1 {
+    font-size: 26px;
+    font-weight: 800;
+    padding-top: 10px;
+  }
+
+  .description-container p {
+    font-size: 17px;
+    padding-top: 10px;
+    text-align: justify;
+  }
+
+  .accordion-img-first {
+    display: flex;
+    object-fit: cover;
+    width: 90vw;
+    height: 20vh;
+    border-radius: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 /* .divider {
     margin-top: 1%;
     border-width: 3px;
@@ -455,17 +721,18 @@
 
 .approach-container h1 {
   font-family: "Mulish", sans-serif;
-  font-size: 60px;
-  color: #0d1741;
+  font-size: 3rem;
+  color: #0D1741;
   font-weight: 800;
+  padding: 0% 6% 1% 6%;
 }
 
 .approach-container p {
   font-family: "Mulish", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   color: #707070;
-  font-weight: 400;
-  padding-top: 2%;
+  font-weight: 500;
+  padding: 2% 4% 2% 6%;
 }
 
 .steps-container {
@@ -539,6 +806,25 @@
 
 /* Responsive styles for mobile devices */
 @media screen and (max-width: 768px) {
+  .approach-container {
+    margin: 8% 2% 1% 2%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .approach-container h1 {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.8rem;
+    color: #0D1741;
+    font-weight: 800;
+    padding: 0% 1% 1% 1%;
+  }
+
+  .approach-container p {
+    padding: 2% 3% 2% 3%;
+    text-align: justify;
+  }
+
   .steps-container {
     flex-direction: column;
     align-items: center;
@@ -567,5 +853,3 @@
     width: 20%;
   }
 }
-
-/* responsive css for services  */

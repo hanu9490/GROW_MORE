@@ -34,7 +34,16 @@ import menuIcon from "./navbarIcons/menu-icon.png";
 //testimonials assets imports
 import hanuClientimg from "./testimonials/Hanumanthu-Profile.png";
 import UserIcon from "./testimonials/user-img.jpg";
-
+// our team
+import harish from "./ourTeam/h1.jpg";
+import harish1 from "./ourTeam/h2.jpg";
+import harish2 from "./ourTeam/h3.jpg";
+import harish3 from "./ourTeam/h4.jpg";
+import harish4 from "./ourTeam/h5.jpg";
+import sree from "./ourTeam/sree.jpg";
+import sree1 from "./ourTeam/sree2.jpg";
+import sai from "./ourTeam/sai.jpg";
+import hj from "./ourTeam/hj.jpg";
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -76,4 +85,7 @@ export const navbarIcons = {
 export const testimonialsImg = {
   hanuClientimg,
   UserIcon,
+};
+export const ourTeam = {
+ harish,harish1,harish3,harish2,harish4, sree,sree1,sai,hj
 };

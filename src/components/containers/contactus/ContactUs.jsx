@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { contactUsIcons } from "../../../assets/icons/icons";
 import "./ContactUS.css";
 

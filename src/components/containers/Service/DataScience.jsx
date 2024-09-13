@@ -3,7 +3,7 @@ import "./Services.css";
 const DataScience = () => {
   return (
     <div className="service-card-Data-science">
-      <div className="Data-science-img-container ">
+      <div className="Data-science-img-container">
         <img
           alt="service-img"
           className="Data-science-img"

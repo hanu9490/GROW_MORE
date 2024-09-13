@@ -30,8 +30,11 @@
     "react-router-dom": "^6.24.1",
     "react-scroll": "^1.9.0",
     "react-simple-chatbot": "^0.6.1",
-    "styled-components": "^4.4.1",
-    "swiper": "^11.1.7"
+    "shallowequal": "^1.1.0",
+    "styled-components": "^6.1.13",
+    "stylis": "^4.3.4",
+    "swiper": "^11.1.7",
+    "tslib": "^2.7.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

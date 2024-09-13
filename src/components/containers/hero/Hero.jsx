@@ -1,4 +1,3 @@
-import React from "react";
 import dark_arrow from "../../../assets/icons/heroSection/dark-arrow.png";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +6,7 @@ const Hero = () => {
   return (
     <div className="hero-section nav-container" id="hero">
       <div className="hero-text">
-        <h1>Transforming your Bussiness with Emerging Technoligies</h1>
+        <h1>Transform Your Business with Emerging Technologies</h1>
         <p>
           Our team of experts will help you to achieve your business goals with
           the latest technologies
