@@ -3,12 +3,15 @@ import "./Navbar.css";
 import { navbarIcons } from "../../../assets/icons/icons";
 import { Link } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../redux-store/slices/LoginSlice";
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const isLogged = useSelector((state) => state.user?.isLoggedIn);
 
   // Define the scroll handler function
   const handleScroll = () => {
@@ -16,10 +19,8 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Add the event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Remove the event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -115,6 +116,35 @@ const Navbar = () => {
             About
           </Link>
         </li>
+
+        {isLogged ? (
+          <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
+            <Link
+              onClick={() => {
+                dispatch(logout());
+                navigate("/");
+              }}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Logout
+            </Link>
+          </li>
+        ) : (
+          <li className={isActiveRoute("admin/login") ? "active-nav-item" : ""}>
+            <Link
+              onClick={() => {
+                handleNavigation("admin/login");
+              }}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Login
+            </Link>
+          </li>
+        )}
       </ul>
       <img
         className="menu-icon"
