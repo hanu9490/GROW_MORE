@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { checkAuth, logout } from "../../../utils/JwtAuth";
-
+import JobListingScreen from "./jobposting/JobListingScreen";
+import AddJob from "./jobposting/AddJob";
+import "./AdminDashboard.css";
+// import "../../../styles/Styles.css";
 const AdminDashboard = () => {
   useEffect(() => {
     const verifyAuth = async () => {
       try {
         await checkAuth();
-        console.log(checkAuth());
       } catch (error) {
         console.error("Authentication failed:", error);
         logout();
@@ -17,9 +19,10 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: "200px" }}>
+    <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
-      <p>Welcome to the admin dashboard!</p>
+      <AddJob />
+      <JobListingScreen />
     </div>
   );
 };
