@@ -11,7 +11,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const isLogged = useSelector((state) => state.user?.isLoggedIn);
+  const { isLoggedIn, tokenValid } = useSelector((state) => state.user);
 
   // Define the scroll handler function
   const handleScroll = () => {
@@ -116,9 +116,29 @@ const Navbar = () => {
             About
           </Link>
         </li>
+        {isLoggedIn && tokenValid && (
+          <li
+            className={
+              isActiveRoute("/admin/dashboard") ? "active-nav-item" : ""
+            }
+          >
+            <Link
+              onClick={() => {
+                handleNavigation("/admin/dashboard");
+              }}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Dashboard
+            </Link>
+          </li>
+        )}
 
-        {isLogged ? (
-          <li className={isActiveRoute("/") ? "active-nav-item" : ""}>
+        {isLoggedIn && tokenValid ? (
+          <li
+            className={isActiveRoute("/admin/logout") ? "active-nav-item" : ""}
+          >
             <Link
               onClick={() => {
                 dispatch(logout());

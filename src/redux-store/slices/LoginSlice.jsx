@@ -7,6 +7,7 @@ const initialState = {
   userType: "admin",
   token: "",
   loading: false,
+  tokenValid: false,
 };
 
 const LoginSlice = createSlice({
@@ -29,9 +30,12 @@ const LoginSlice = createSlice({
     setLoading(state, action) {
       state.loading = action.payload;
     },
+    setTokenStatus(state, action) {
+      state.tokenValid = action.payload;
+    },
   },
 });
 
-export const { login, logout, setLoading } = LoginSlice.actions;
+export const { login, logout, setLoading, setTokenStatus } = LoginSlice.actions;
 
 export default LoginSlice;

@@ -36,11 +36,7 @@ const routes = (
       <Route path="/admin/login" element={<LoginPage />} />
       <Route
         path="/admin/dashboard"
-        element={
-          <PrivateRoute>
-            <AdminDashboard />
-          </PrivateRoute>
-        }
+        element={<PrivateRoute element={<AdminDashboard />} />}
       />
     </Routes>
     <Footer />

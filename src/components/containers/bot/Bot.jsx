@@ -19,7 +19,7 @@ const Bot = () => {
     query: "",
   });
 
-  console.log(userInfo, "userInfo from bot");
+  // console.log(userInfo, "userInfo from bot");
 
   // Toggle chatbot visibility
   const toggleBot = () => {

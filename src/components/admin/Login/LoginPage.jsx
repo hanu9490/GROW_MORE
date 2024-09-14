@@ -30,7 +30,6 @@ const LoginPage = () => {
 
       // Calling the login service
       const response = await LoginService.Login(payload);
-      console.log("response", response);
       if (response && response.status === 200) {
         // Successful login
         const { user, token } = response.data;
@@ -55,9 +54,8 @@ const LoginPage = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        padding: "0 20px",
         marginTop: "100px",
+        padding: "20px",
       }}
     >
       <StyledWrapper>

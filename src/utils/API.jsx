@@ -23,6 +23,19 @@ JwtInstance.interceptors.request.use(
   }
 );
 
+JwtInstance.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    if (error.response.status === 401) {
+      localStorage.removeItem("token");
+      window.location = "/admin/login";
+    }
+    return Promise.reject(error);
+  }
+);
+
 const LoginInstance = axios.create({
   baseURL: "http://localhost:4001",
 });
