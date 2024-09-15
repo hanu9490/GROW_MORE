@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Create an instance of axios
 const JwtInstance = axios.create({
-  baseURL: "http://localhost:4001",
+  // baseURL: "http://localhost:4001",
+  baseURL: "https://growmore-seven.vercel.app/",
   headers: {
     "Content-Type": "application/json",
     accept: "application/json",
@@ -37,7 +38,8 @@ JwtInstance.interceptors.response.use(
 );
 
 const LoginInstance = axios.create({
-  baseURL: "http://localhost:4001",
+  // baseURL: "http://localhost:4001",
+  baseURL: "https://growmore-seven.vercel.app/",
 });
 
 export { LoginInstance, JwtInstance };

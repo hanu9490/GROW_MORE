@@ -2,63 +2,14 @@ import React from "react";
 import JobCard from "./JobCard";
 import FeatureOfInternship from "./FeatureOfInternship";
 import InternshipAccordion from "./InternshipAccordion";
+import { jobData } from "../../../utils/Utils";
+import { useSelector } from "react-redux";
 const Internship = () => {
-  const jobData = [
-    {
-      title: "Software development",
-      overview: ["Overview", "DevOps", "CI/CD", "Languages", "Web Scraping"],
-      active: true,
-    },
-    {
-      title: "Machine Learning",
-      overview: [
-        "Overview",
-        "Data Preprocessing",
-        "Model Building",
-        "Model Training",
-        "Model Testing",
-      ],
-      active: false,
-    },
-    {
-      title: "Data Science",
-      overview: [
-        "Overview",
-        "Data Analysis",
-        "Data Visualization",
-        "Data Interpretation",
-        "Data Presentation",
-      ],
-      active: false,
-    },
-    {
-      title: "Web Development",
-      overview: ["Overview", "Frontend", "Backend", "Full Stack", "Database"],
-      active: true,
-    },
-    {
-      title: "App Development",
-      overview: [
-        "Overview",
-        "Android Development",
-        "iOS Development",
-        "Cross Platform Development",
-        "App Hosting",
-      ],
-      active: true,
-    },
-    {
-      title: "Cyber Security",
-      overview: [
-        "Overview",
-        "Network Security",
-        "Web Security",
-        "Malware Analysis",
-        "Incident Response",
-      ],
-      active: false,
-    },
-  ];
+  const { jobPostings, loading } = useSelector((state) => state?.job_posting);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="internship-container">
       <div className="intership-text-fields">
@@ -72,7 +23,7 @@ const Internship = () => {
         </div>
       </div>
       <div className="job-card-container">
-        {jobData.map((item) => {
+        {jobPostings?.map((item) => {
           return (
             <JobCard
               title={item.title}

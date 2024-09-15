@@ -28,7 +28,6 @@ export const JobService = {
     }
   },
   EditJob: async (payload) => {
-    console.log("payload", payload);
     try {
       const response = await API.put(`editjob/${payload.id}`, payload, {
         headers: {
