@@ -1,5 +1,5 @@
 ## Deployed link below
-- [https://grow-more-v1.netlify.app/]
+- [https://grow-more-psi.vercel.app]
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
