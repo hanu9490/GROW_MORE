@@ -77,6 +77,18 @@ const Navbar = () => {
             Careers
           </Link>
         </li>
+        <li className={isActiveRoute("/ourtrainings") ? "active-nav-item" : ""}>
+          <Link
+            onClick={() => {
+              handleNavigation("/ourtrainings");
+            }}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Our Trainings
+          </Link>
+        </li>
 
         <li className={isActiveRoute("/services") ? "active-nav-item" : ""}>
           <Link

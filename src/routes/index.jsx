@@ -10,10 +10,10 @@ import ApplyJob from "../components/containers/internship/ApplyJob";
 import About from "../components/screens/About";
 import { useLocation } from "react-router-dom";
 import Footer from "../components/containers/footer/Footer";
-import Login from "../components/admin/Login/Login";
 import LoginPage from "../components/admin/Login/LoginPage";
 import PrivateRoute from "../components/admin/privateroute/PrivateRoute";
 import AdminDashboard from "../components/admin/Dashboard/AdminDashboard";
+import Trainings from "../components/containers/our-trainings/Trainings";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -34,6 +34,7 @@ const routes = (
       <Route path="/about" element={<About />} />
       <Route path="/apply/:jobTitle" element={<ApplyJob />} />
       <Route path="/admin/login" element={<LoginPage />} />
+      <Route path="/ourtrainings" element={<Trainings />} />
       <Route
         path="/admin/dashboard"
         element={<PrivateRoute element={<AdminDashboard />} />}

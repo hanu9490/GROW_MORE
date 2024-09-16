@@ -70,8 +70,8 @@ const AddJob = () => {
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Button variant="contained" color="primary" onClick={handleOpen}>

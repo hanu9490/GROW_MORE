@@ -4,6 +4,7 @@ import JobListingScreen from "./jobposting/JobListingScreen";
 import AddJob from "./jobposting/AddJob";
 import ContactedUsers from "./contactedUsers/ContactedUsers";
 import "./AdminDashboard.css";
+import AdminNavbar from "./admin-navbar/AdminNavbar";
 
 const AdminDashboard = () => {
   useEffect(() => {
@@ -21,10 +22,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
-      <h1>Admin Dashboard</h1>
-      <AddJob />
-      <JobListingScreen />
-      <ContactedUsers />
+      <AdminNavbar />
     </div>
   );
 };
