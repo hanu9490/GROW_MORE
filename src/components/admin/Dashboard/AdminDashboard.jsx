@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { checkAuth, logout } from "../../../utils/JwtAuth";
 import JobListingScreen from "./jobposting/JobListingScreen";
 import AddJob from "./jobposting/AddJob";
+import ContactedUsers from "./contactedUsers/ContactedUsers";
 import "./AdminDashboard.css";
-// import "../../../styles/Styles.css";
+
 const AdminDashboard = () => {
   useEffect(() => {
     const verifyAuth = async () => {
@@ -23,6 +24,7 @@ const AdminDashboard = () => {
       <h1>Admin Dashboard</h1>
       <AddJob />
       <JobListingScreen />
+      <ContactedUsers />
     </div>
   );
 };

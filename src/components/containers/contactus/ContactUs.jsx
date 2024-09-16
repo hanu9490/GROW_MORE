@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import { contactUsIcons } from "../../../assets/icons/icons";
 import "./ContactUS.css";
+import { ContactService } from "../../../services/ContactService";
+import {
+  setLoading,
+  setError,
+  setCreatedContact,
+} from "../../../redux-store/slices/ContactSlice";
+import { useDispatch, useSelector } from "react-redux";
+import Toast from "../toast/Toast";
 
 const ContactUs = () => {
+  const dispatch = useDispatch();
+  const { loading, contactedList, error } = useSelector(
+    (state) => state.contact
+  );
+
   // State to manage form input
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    query: "",
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [successToast, setSuccessToast] = useState(false);
 
   // Form validation
   const validate = () => {
@@ -24,8 +37,8 @@ const ContactUs = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "Email is invalid";
     }
-    if (!formData.message) {
-      errors.message = "Message is required";
+    if (!formData.query) {
+      errors.query = "Message is required";
     }
     return errors;
   };
@@ -36,36 +49,37 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
+    setSuccessToast(false);
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length === 0) {
-      // Send email via emailjs
-      emailjs
-        .send(
-          "buehjyl", // Replace with your service ID
-          "j7s28fh", // Replace with your template ID
-          formData,
-          "bN1KiPV45vYoY_gvHd74Q" // Replace with your user ID
-        )
-        .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setIsSubmitted(true);
-        })
-        .catch((err) => {
-          console.error("FAILED...", err);
-        });
+    if (Object.keys(validationErrors).length > 0) return;
 
-      // Clear the form
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
+    dispatch(setLoading(true));
+
+    ContactService.CreateContactUs(formData)
+      .then((response) => {
+        if (response.status === 201) {
+          dispatch(setCreatedContact(response.data));
+
+          // Reset the form data
+          setFormData({
+            name: "",
+            email: "",
+            query: "",
+          });
+          setSuccessToast(true);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        dispatch(setError(error.message));
+      })
+      .finally(() => {
+        dispatch(setLoading(false));
       });
-    }
   };
 
   return (
@@ -134,20 +148,19 @@ const ContactUs = () => {
           <div className="form-group">
             <textarea
               placeholder="Type Your Message Here"
-              name="message"
-              value={formData.message}
+              name="query"
+              value={formData.query}
               onChange={handleInputChange}
             />
-            {errors.message && <p className="error">{errors.message}</p>}
+            {errors.query && <p className="error">{errors.query}</p>}
           </div>
           <button className="submit-btn" type="submit">
-            Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
-          {isSubmitted && (
-            <p className="success-message">Form submitted successfully!</p>
-          )}
         </form>
       </div>
+      {successToast && <Toast msg={contactedList?.message} />}
+      {error && <Toast msg={error} />}
     </div>
   );
 };

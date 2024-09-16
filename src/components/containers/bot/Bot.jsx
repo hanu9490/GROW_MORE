@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import ChatBot from "react-simple-chatbot";
 import "./Bot.css";
 import { ThemeProvider } from "styled-components";
-import ChatIcon from "@mui/icons-material/Chat";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import { Tooltip } from "@mui/material";
-
+import { ContactService } from "../../../services/ContactService";
+import { setCreatedContact } from "../../../redux-store/slices/ContactSlice";
 const Bot = () => {
   // State to toggle chatbot visibility
   const [isBotVisible, setIsBotVisible] = useState(false);
@@ -25,6 +25,16 @@ const Bot = () => {
   const toggleBot = () => {
     setIsBotVisible(!isBotVisible);
   };
+
+  function createContact(payload) {
+    ContactService.CreateContactUs(payload)
+      .then((response) => {
+        setCreatedContact(response.data);
+      })
+      .catch((error) => {
+        console.error("Error creating contact:", error);
+      });
+  }
 
   // Customizing the chatbot theme
   const theme = {
@@ -119,8 +129,12 @@ const Bot = () => {
     const email = steps.email.value;
     const phone = steps.phone.value;
     const query = steps.query.value;
-
-    setUserInfo({ name, email, phone, query });
+    let payload = {
+      name: name,
+      email: `${email} , ${phone}`,
+      query: query,
+    };
+    createContact(payload);
   };
 
   // Custom Header with Close Button

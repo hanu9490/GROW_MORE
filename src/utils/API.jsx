@@ -42,4 +42,9 @@ const LoginInstance = axios.create({
   baseURL: "https://growmore-seven.vercel.app/",
 });
 
-export { LoginInstance, JwtInstance };
+const API = axios.create({
+  // baseURL: "http://localhost:4001",
+  baseURL: "https://growmore-seven.vercel.app/",
+});
+
+export { LoginInstance, JwtInstance, API };
