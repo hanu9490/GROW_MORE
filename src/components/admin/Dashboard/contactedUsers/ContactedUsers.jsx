@@ -7,6 +7,7 @@ import {
   setError,
 } from "../../../../redux-store/slices/ContactSlice";
 import ContactCard from "./ContactCard";
+import Loader from "../../../containers/loader/Loader";
 
 const ContactedUsers = () => {
   const dispatch = useDispatch();
@@ -28,10 +29,6 @@ const ContactedUsers = () => {
     fetchContactedList();
   }, [dispatch]);
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
   if (error) {
     return <h1>{error}</h1>;
   }
@@ -43,6 +40,7 @@ const ContactedUsers = () => {
   return (
     <>
       <ContactCard contactedUsers={contactedUsers} />
+      {loading && <Loader />}
     </>
   );
 };

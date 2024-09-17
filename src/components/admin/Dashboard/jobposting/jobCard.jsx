@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import "./AdminJobCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { JobService } from "../../../../services/JobPostingService";
-import { getJobPostingSuccess } from "../../../../redux-store/slices/JobPostingSlice";
+import {
+  getJobPostingSuccess,
+  getJobPosting,
+} from "../../../../redux-store/slices/JobPostingSlice";
 import EditJobModal from "./EditJobModal"; // Import the modal component
+import Loader from "../../../containers/loader/Loader";
 
 const JobCard = ({ title, overview, active, id }) => {
   const dispatch = useDispatch();
-  const { jobPostings, loading } = useSelector((state) => state?.job_posting);
+  const { loading } = useSelector((state) => state?.job_posting);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
   const deleteJobHandler = async () => {
+    dispatch(getJobPosting());
     let payload = {
       id: id,
     };
@@ -35,9 +40,8 @@ const JobCard = ({ title, overview, active, id }) => {
 
   const handleSave = async (updatedJob) => {
     // Handle save logic, such as updating the job details in your state or sending it to the backend
-    console.log("Updated Job:", updatedJob);
-
     // Simulating API call to update job details
+    dispatch(getJobPosting());
     const response = await JobService.EditJob(updatedJob);
     if (response.status === 200) {
       const res = await JobService.GetJob();
@@ -75,6 +79,7 @@ const JobCard = ({ title, overview, active, id }) => {
         onSave={handleSave}
         job={{ title, overview, active, id }}
       />
+      {loading && <Loader />}
     </div>
   );
 };

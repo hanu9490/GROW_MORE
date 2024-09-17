@@ -11,9 +11,13 @@ import {
 } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { JobService } from "../../../../services/JobPostingService";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { getJobPostingSuccess } from "../../../../redux-store/slices/JobPostingSlice";
+import {
+  getJobPostingSuccess,
+  getJobPosting,
+} from "../../../../redux-store/slices/JobPostingSlice";
+import Loader from "../../../containers/loader/Loader";
 const AddJob = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
@@ -21,6 +25,7 @@ const AddJob = () => {
   const [items, setItems] = useState([]);
   const [currentItem, setCurrentItem] = useState("");
   const [active, setActive] = useState(false);
+  const { loading } = useSelector((state) => state.jobposting);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -33,6 +38,7 @@ const AddJob = () => {
   };
 
   const SubmitJobToServer = async () => {
+    dispatch(getJobPosting());
     const response = await JobService.AddJob({
       title: title,
       overview: items,
@@ -127,6 +133,7 @@ const AddJob = () => {
           </Box>
         </Box>
       </Modal>
+      {loading && <Loader />}
     </div>
   );
 };

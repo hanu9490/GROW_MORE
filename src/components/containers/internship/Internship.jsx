@@ -3,17 +3,18 @@ import JobCard from "./JobCard";
 import FeatureOfInternship from "./FeatureOfInternship";
 import InternshipAccordion from "./InternshipAccordion";
 // import { jobData } from "../../../utils/Utils";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { JobService } from "../../../services/JobPostingService";
+import { setLoading } from "../../../redux-store/slices/ContactSlice";
+import Loader from "../loader/Loader";
 const Internship = () => {
+  const dispatch = useDispatch();
   const [jobData, setJobData] = useState([]);
-  const { jobPostings, loading } = useSelector((state) => state?.job_posting);
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const { loading } = useSelector((state) => state?.job_posting);
 
   useEffect(() => {
     const fetchJobData = async () => {
+      dispatch(setLoading(true));
       const response = await JobService.GetJob();
       if (response.status === 200) {
         setJobData(response.data);
@@ -21,7 +22,7 @@ const Internship = () => {
     };
     fetchJobData();
   }, []);
-
+  console.log(loading);
   return (
     <div className="internship-container">
       <div className="intership-text-fields">
@@ -45,6 +46,7 @@ const Internship = () => {
               />
             );
           })}
+        {loading && <Loader />}
       </div>
       <div>
         <FeatureOfInternship />

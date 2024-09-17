@@ -12,9 +12,10 @@ import Toast from "../toast/Toast";
 
 const ContactUs = () => {
   const dispatch = useDispatch();
-  const { loading, contactedList, error } = useSelector(
+  const { loading, createdContact, error } = useSelector(
     (state) => state.contact
   );
+  let contactState = useSelector((state) => state.contact);
 
   // State to manage form input
   const [formData, setFormData] = useState({
@@ -159,7 +160,7 @@ const ContactUs = () => {
           </button>
         </form>
       </div>
-      {successToast && <Toast msg={contactedList?.message} />}
+      {successToast && <Toast msg={createdContact?.message} />}
       {error && <Toast msg={error} />}
     </div>
   );

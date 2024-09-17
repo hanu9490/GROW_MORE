@@ -1,31 +1,18 @@
 import React from "react";
 import { Card, CardMedia, CardContent, Typography, Grid } from "@mui/material";
-import react_logo from "../../../assets/icons/ourtrainings/react-logo.png";
+import { keyframes } from "@emotion/react";
+import { courses } from "../../../utils/Utils";
 
-const courses = [
-  {
-    title: "Full Stack Development",
-    description:
-      "Learn to build complete web applications from front-end to back-end.",
-    image: "https://via.placeholder.com/300", // Replace with your image URL
-  },
-  {
-    title: "Java Programming",
-    description: "Master the Java language and develop robust applications.",
-    image: "https://via.placeholder.com/300", // Replace with your image URL
-  },
-  {
-    title: "Python Programming",
-    description:
-      "Dive into Python for data analysis, web development, and more.",
-    image: "https://via.placeholder.com/300", // Replace with your image URL
-  },
-  {
-    title: "MERN Stack",
-    description: "Become proficient in MongoDB, Express, React, and Node.js.",
-    image: "https://via.placeholder.com/300", // Replace with your image URL
-  },
-];
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const TrainingCard = () => {
   return (
@@ -42,12 +29,17 @@ const TrainingCard = () => {
               backgroundColor: "white",
               width: "100%",
               boxShadow: "none",
+              animation: `${fadeIn} 0.5s ease-in-out`,
+              transition: "transform 0.3s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
             }}
           >
             <CardMedia
               component="img"
               sx={{ width: { xs: "100%", md: "50%" } }}
-              image={react_logo}
+              image={course.image}
               alt={course.title}
             />
             <CardContent
@@ -59,10 +51,23 @@ const TrainingCard = () => {
                 backgroundColor: "white",
               }}
             >
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  fontSize: "1.8rem",
+                  color: "#3056d3",
+                  fontFamily: "Poppins-semi-bold",
+                }}
+              >
                 {course.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ fontSize: "1.2rem" }}
+              >
                 {course.description}
               </Typography>
             </CardContent>

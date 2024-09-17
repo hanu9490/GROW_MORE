@@ -3,10 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import JobCard from "./jobCard";
 import { JobService } from "../../../../services/JobPostingService";
-import { getJobPostingSuccess } from "../../../../redux-store/slices/JobPostingSlice";
+import {
+  getJobPostingSuccess,
+  getJobPosting,
+} from "../../../../redux-store/slices/JobPostingSlice";
 import { checkAuth, logout } from "../../../../utils/JwtAuth";
 
 import "./AdminJobCard.css";
+import Loader from "../../../containers/loader/Loader";
 const JobListingScreen = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,6 +29,7 @@ const JobListingScreen = () => {
 
   useEffect(() => {
     const getJobList = async () => {
+      dispatch(getJobPosting());
       const response = await JobService.GetJob();
       if (response.status === 200) {
         dispatch(getJobPostingSuccess(response.data));
@@ -47,7 +52,7 @@ const JobListingScreen = () => {
             />
           );
         })}
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loader />}
     </div>
   );
 };

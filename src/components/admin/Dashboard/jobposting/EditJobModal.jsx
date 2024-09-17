@@ -10,6 +10,9 @@ import {
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { useSelector } from "react-redux";
+import Toast from "../../../containers/toast/Toast";
+import Loader from "../../../containers/loader/Loader";
 
 const EditJobModal = ({ open, onClose, onSave, job }) => {
   const [title, setTitle] = useState(job.title || "");
@@ -17,6 +20,8 @@ const EditJobModal = ({ open, onClose, onSave, job }) => {
   const [currentItem, setCurrentItem] = useState("");
   const [editIndex, setEditIndex] = useState(-1); // Tracks index for editing
   const [active, setActive] = useState(job.active || false);
+
+  let { loading, error } = useSelector((state) => state.job_posting);
 
   useEffect(() => {
     setTitle(job.title || "");
@@ -71,67 +76,71 @@ const EditJobModal = ({ open, onClose, onSave, job }) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose}>
-      <Box sx={modalStyle}>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Edit Job Details
-        </Typography>
-        <TextField
-          fullWidth
-          label="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          margin="normal"
-        />
-        <Box display="flex" alignItems="center">
+    <>
+      <Modal open={open} onClose={onClose}>
+        <Box sx={modalStyle}>
+          <Typography variant="h6" component="h2" gutterBottom>
+            Edit Job Details
+          </Typography>
           <TextField
             fullWidth
-            label="Add/Edit Item"
-            value={currentItem}
-            onChange={(e) => setCurrentItem(e.target.value)}
+            label="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             margin="normal"
           />
-          <IconButton onClick={handleAddItem} color="primary">
-            <AddCircleOutlineIcon />
-          </IconButton>
-        </Box>
-        <Box>
-          {items.map((item, index) => (
-            <Box
-              key={index}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              mb={1}
-            >
-              <Typography variant="body2">{item}</Typography>
-              <Box>
-                <IconButton
-                  onClick={() => handleEditItem(index)}
-                  color="primary"
-                >
-                  <EditIcon />
-                </IconButton>
-                <IconButton
-                  onClick={() => handleDeleteItem(index)}
-                  color="secondary"
-                >
-                  <DeleteIcon />
-                </IconButton>
+          <Box display="flex" alignItems="center">
+            <TextField
+              fullWidth
+              label="Add/Edit Item"
+              value={currentItem}
+              onChange={(e) => setCurrentItem(e.target.value)}
+              margin="normal"
+            />
+            <IconButton onClick={handleAddItem} color="primary">
+              <AddCircleOutlineIcon />
+            </IconButton>
+          </Box>
+          <Box>
+            {items.map((item, index) => (
+              <Box
+                key={index}
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                mb={1}
+              >
+                <Typography variant="body2">{item}</Typography>
+                <Box>
+                  <IconButton
+                    onClick={() => handleEditItem(index)}
+                    color="primary"
+                  >
+                    <EditIcon />
+                  </IconButton>
+                  <IconButton
+                    onClick={() => handleDeleteItem(index)}
+                    color="secondary"
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                </Box>
               </Box>
-            </Box>
-          ))}
+            ))}
+          </Box>
+          <Box mt={2} display="flex" justifyContent="space-between">
+            <Button variant="contained" color="primary" onClick={handleSave}>
+              Save
+            </Button>
+            <Button variant="outlined" onClick={onClose}>
+              Cancel
+            </Button>
+          </Box>
         </Box>
-        <Box mt={2} display="flex" justifyContent="space-between">
-          <Button variant="contained" color="primary" onClick={handleSave}>
-            Save
-          </Button>
-          <Button variant="outlined" onClick={onClose}>
-            Cancel
-          </Button>
-        </Box>
-      </Box>
-    </Modal>
+      </Modal>
+      {error && <Toast msg={error} />}
+      {loading && <Loader />}
+    </>
   );
 };
 

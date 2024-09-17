@@ -44,6 +44,14 @@ import sree from "./ourTeam/sree.jpg";
 import sree1 from "./ourTeam/sree2.jpg";
 import sai from "./ourTeam/sai.jpg";
 import hj from "./ourTeam/hj.jpg";
+
+// our trainings imports
+import html from "../icons/ourtrainings/html.png";
+import css from "../icons/ourtrainings/css.png";
+import js from "../icons/ourtrainings/js.png";
+import react from "../icons/ourtrainings/react.png";
+import nodejs from "../icons/ourtrainings/nodejs.png";
+
 export const whyOurServicesIcons = {
   Rectangle17,
   Rectangle18,
@@ -87,5 +95,20 @@ export const testimonialsImg = {
   UserIcon,
 };
 export const ourTeam = {
- harish,harish1,harish3,harish2,harish4, sree,sree1,sai,hj
+  harish,
+  harish1,
+  harish3,
+  harish2,
+  harish4,
+  sree,
+  sree1,
+  sai,
+  hj,
+};
+export const trainingImages = {
+  html,
+  css,
+  js,
+  react,
+  nodejs,
 };
