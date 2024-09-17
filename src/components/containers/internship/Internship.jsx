@@ -37,15 +37,15 @@ const Internship = () => {
       </div>
       <div className="job-card-container">
         {jobData.length > 0 &&
-          jobData?.map((item) => {
-            return (
-              <JobCard
-                title={item.title}
-                overview={item.overview}
-                active={item.active}
-              />
-            );
-          })}
+          jobData.map((item, index) => (
+            <JobCard
+              key={index}
+              title={item.title}
+              overview={item.overview}
+              active={item.active}
+            />
+          ))}
+
         {loading && <Loader />}
       </div>
       <div>

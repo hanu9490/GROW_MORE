@@ -1,8 +1,7 @@
 import React from "react";
-import Card from "../../common/Card";
+import Card from "./Card";
 import WebDevCardCoverImage from "../../../assets/icons/whatwedoIcons/web-development.png";
 import DataAnalysisCardCoverImage from "../../../assets/icons/whatwedoIcons/data-analysis.png";
-import Navbar from "../navbar/Navbar";
 const WhatWeDo = () => {
   const cardData = [
     {

@@ -2,8 +2,10 @@ import React from "react";
 import "./OurTechnology.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const OurTechnology = () => {
+  const navigate = useNavigate();
   return (
     <div className="our-technology-container">
       <div className="our-technology-left">
@@ -12,7 +14,7 @@ const OurTechnology = () => {
           Our technology allows you to offer the latest software to your
           possible customers!
         </h1>
-        <button className="cta-button">
+        <button className="cta-button" onClick={() => navigate("/about")}>
           More About Us <span>→</span>
         </button>
       </div>

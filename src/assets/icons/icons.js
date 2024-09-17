@@ -46,6 +46,7 @@ import sai from "./ourTeam/sai.jpg";
 import hj from "./ourTeam/hj.jpg";
 
 // our trainings imports
+import softwareCloud from "../icons/ourtrainings/softwareCloud.png";
 import html from "../icons/ourtrainings/html.png";
 import css from "../icons/ourtrainings/css.png";
 import js from "../icons/ourtrainings/js.png";
@@ -111,4 +112,5 @@ export const trainingImages = {
   js,
   react,
   nodejs,
+  softwareCloud,
 };

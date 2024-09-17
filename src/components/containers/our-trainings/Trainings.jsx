@@ -1,5 +1,6 @@
 import React from "react";
 import TrainingCard from "./TrainingCard";
+import SoftwareCoachingCard from "./SoftwareCoachingCard";
 
 const Trainings = () => {
   return (
@@ -14,6 +15,8 @@ const Trainings = () => {
     >
       <h1>Our Trainings</h1>
       <TrainingCard />
+      <h1>Software Coaching</h1>
+      <SoftwareCoachingCard />
     </div>
   );
 };
