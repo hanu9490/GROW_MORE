@@ -1,6 +1,6 @@
-
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import {ourTeam} from "../../../assets/icons/icons"
+import { ourTeam } from "../../../assets/icons/icons";
+import withDotPatternModel from "./DotpatternModel";
 const OurTeam = () => {
   let heading1 = "Our Team";
   let heading2 =
@@ -87,4 +87,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
+export default withDotPatternModel(OurTeam);
