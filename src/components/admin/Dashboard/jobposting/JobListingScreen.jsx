@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import JobCard from "./jobCard";
 import { JobService } from "../../../../services/JobPostingService";
 import {
-  getJobPostingSuccess,
-  getJobPosting,
+  setLoader,
+  setJobs,
 } from "../../../../redux-store/slices/JobPostingSlice";
 import { checkAuth, logout } from "../../../../utils/JwtAuth";
 
@@ -25,14 +25,14 @@ const JobListingScreen = () => {
 
     verifyAuth();
   }, []);
-  const { jobPostings, loading } = useSelector((state) => state?.job_posting);
+  const { alljobs, loading } = useSelector((state) => state?.job_posting);
 
   useEffect(() => {
     const getJobList = async () => {
-      dispatch(getJobPosting());
+      dispatch(setLoader(true));
       const response = await JobService.GetJob();
       if (response.status === 200) {
-        dispatch(getJobPostingSuccess(response.data));
+        dispatch(setJobs(response.data));
       }
     };
     getJobList();
@@ -40,8 +40,8 @@ const JobListingScreen = () => {
 
   return (
     <div className="admin-job-card-container">
-      {jobPostings &&
-        jobPostings?.map((job) => {
+      {alljobs?.length > 0 &&
+        alljobs?.map((job) => {
           return (
             <JobCard
               key={job.id}

@@ -14,10 +14,11 @@ import { JobService } from "../../../../services/JobPostingService";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-  getJobPostingSuccess,
-  getJobPosting,
+  setLoader,
+  setJobs,
 } from "../../../../redux-store/slices/JobPostingSlice";
 import Loader from "../../../containers/loader/Loader";
+import Toast from "../../../containers/toast/Toast";
 const AddJob = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
@@ -25,6 +26,7 @@ const AddJob = () => {
   const [items, setItems] = useState([]);
   const [currentItem, setCurrentItem] = useState("");
   const [active, setActive] = useState(false);
+  const [toast, setToast] = useState(false);
   const { loading } = useSelector((state) => state?.job_posting);
 
   const handleOpen = () => setOpen(true);
@@ -38,16 +40,18 @@ const AddJob = () => {
   };
 
   const SubmitJobToServer = async () => {
-    dispatch(getJobPosting());
+    setToast(false);
+    dispatch(setLoader(true));
     const response = await JobService.AddJob({
       title: title,
       overview: items,
       active: active,
     });
     if (response.status === 201) {
+      setToast(true);
       const res = await JobService.GetJob();
       if (res.status === 200) {
-        dispatch(getJobPostingSuccess(res.data));
+        dispatch(setJobs(res.data));
       }
       console.log("Job added successfully");
     }
@@ -134,6 +138,7 @@ const AddJob = () => {
         </Box>
       </Modal>
       {loading && <Loader />}
+      {toast && <Toast msg="Job added successfully" />}
     </div>
   );
 };

@@ -5,24 +5,25 @@ import InternshipAccordion from "./InternshipAccordion";
 // import { jobData } from "../../../utils/Utils";
 import { useSelector, useDispatch } from "react-redux";
 import { JobService } from "../../../services/JobPostingService";
-import { setLoading } from "../../../redux-store/slices/ContactSlice";
+import {
+  setLoader,
+  setJobs,
+} from "../../../redux-store/slices/JobPostingSlice";
 import Loader from "../loader/Loader";
 const Internship = () => {
   const dispatch = useDispatch();
-  const [jobData, setJobData] = useState([]);
-  const { loading } = useSelector((state) => state?.job_posting);
+  const { alljobs, loading } = useSelector((state) => state?.job_posting);
 
   useEffect(() => {
     const fetchJobData = async () => {
-      dispatch(setLoading(true));
+      dispatch(setLoader(true));
       const response = await JobService.GetJob();
       if (response.status === 200) {
-        setJobData(response.data);
+        dispatch(setJobs(response.data));
       }
     };
     fetchJobData();
   }, []);
-  console.log(loading);
   return (
     <div className="internship-container">
       <div className="intership-text-fields">
@@ -36,8 +37,8 @@ const Internship = () => {
         </div>
       </div>
       <div className="job-card-container">
-        {jobData.length > 0 &&
-          jobData.map((item, index) => (
+        {alljobs?.length > 0 &&
+          alljobs.map((item, index) => (
             <JobCard
               key={index}
               title={item.title}

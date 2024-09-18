@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const JobCard = ({ title, overview, active }) => {
   const navigate = useNavigate();
-
   const handleApplyClick = () => {
     navigate(`/apply/${title.replace(/\s+/g, "-").toLowerCase()}`);
   };

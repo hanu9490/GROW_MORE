@@ -3,19 +3,24 @@ import "./AdminJobCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { JobService } from "../../../../services/JobPostingService";
 import {
-  getJobPostingSuccess,
-  getJobPosting,
+  setLoader,
+  setJobs,
+  setCurrentAppliedJob,
 } from "../../../../redux-store/slices/JobPostingSlice";
 import EditJobModal from "./EditJobModal"; // Import the modal component
 import Loader from "../../../containers/loader/Loader";
+import Toast from "../../../containers/toast/Toast";
 
 const JobCard = ({ title, overview, active, id }) => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state?.job_posting);
   const [editModalOpen, setEditModalOpen] = useState(false);
+  const [toast, setToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   const deleteJobHandler = async () => {
-    dispatch(getJobPosting());
+    setToast(false);
+    dispatch(setLoader(true));
     let payload = {
       id: id,
     };
@@ -23,9 +28,11 @@ const JobCard = ({ title, overview, active, id }) => {
       payload,
     });
     if (response.status === 200) {
+      setToastMessage("Job Deleted Successfully");
+      setToast(true);
       const res = await JobService.GetJob();
       if (res.status === 200) {
-        dispatch(getJobPostingSuccess(res.data));
+        dispatch(setJobs(res.data));
       }
     }
   };
@@ -41,12 +48,16 @@ const JobCard = ({ title, overview, active, id }) => {
   const handleSave = async (updatedJob) => {
     // Handle save logic, such as updating the job details in your state or sending it to the backend
     // Simulating API call to update job details
-    dispatch(getJobPosting());
+    setToast(false);
+    dispatch(setLoader(true));
     const response = await JobService.EditJob(updatedJob);
     if (response.status === 200) {
+      setToastMessage("Job Updated Successfully");
+      setToast(true);
+
       const res = await JobService.GetJob();
       if (res.status === 200) {
-        dispatch(getJobPostingSuccess(res.data));
+        dispatch(setJobs(res.data));
       }
     }
 
@@ -80,6 +91,7 @@ const JobCard = ({ title, overview, active, id }) => {
         job={{ title, overview, active, id }}
       />
       {loading && <Loader />}
+      {toast && <Toast msg={toastMessage} />}
     </div>
   );
 };
