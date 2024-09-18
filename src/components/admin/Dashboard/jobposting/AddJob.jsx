@@ -25,7 +25,7 @@ const AddJob = () => {
   const [items, setItems] = useState([]);
   const [currentItem, setCurrentItem] = useState("");
   const [active, setActive] = useState(false);
-  const { loading } = useSelector((state) => state.jobposting);
+  const { loading } = useSelector((state) => state?.job_posting);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

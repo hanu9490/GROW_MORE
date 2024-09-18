@@ -1,70 +1,111 @@
-// // Testimonials.jsx
+import { cn } from "../../../lib/utils";
+import Marquee from "../../../magicui/Marquee";
 
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import "./Testimonials.css";
-// import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import TestimonialCard from "./TestimonialCard";
+const reviews = [
+  {
+    name: "Priya S",
+    username: "@priyasundar",
+    body:
+      "Grow More has exceeded all my expectations. Their services are top-notch, and I'm absolutely amazed by their dedication!",
+    img: "https://avatar.vercel.sh/priya",
+  },
+  {
+    name: "Karthik Subramanian",
+    username: "@karthik_sub",
+    body:
+      "I've experienced many companies, but Grow More stands out. Their commitment to excellence is truly commendable!",
+    img: "https://avatar.vercel.sh/karthik",
+  },
+  {
+    name: "Aarav R",
+    username: "@aarav_ravi",
+    body:
+      "Grow More is hands down the best in the business. The quality of their services is simply unmatched.",
+    img: "https://avatar.vercel.sh/aarav",
+  },
+  {
+    name: "Meena L",
+    username: "@meenalaxmi",
+    body:
+      "I’m incredibly impressed with Grow More’s services. Their attention to detail and customer focus is brilliant!",
+    img: "https://avatar.vercel.sh/meena",
+  },
+  {
+    name: "Ravi Kumar",
+    username: "@ravi_kumar",
+    body:
+      "Working with Grow More has been an outstanding experience. Their professionalism and quality are simply amazing.",
+    img: "https://avatar.vercel.sh/ravi",
+  },
+  {
+    name: "Lakshmi P",
+    username: "@lakshmiprasad",
+    body:
+      "I’m speechless! Grow More has set a new standard for excellence. I would highly recommend their services to anyone.",
+    img: "https://avatar.vercel.sh/lakshmi",
+  },
+];
 
-// const Testimonials = () => {
-//   return (
-//     <div className="testimonials">
-//       <div className="container">
-//         <div className="section-header">
-//           <h2 className="title">What our clients say</h2>
-//         </div>
-//         <div className="testimonials-content">
-//           <Swiper
-//             pagination={{
-//               dynamicBullets: true,
-//               clickable: true,
-//             }}
-//             breakpoints={{
-//               0: {
-//                 slidesPerView: 1,
-//               },
-//               768: {
-//                 slidesPerView: 2,
-//               },
-//               1024: {
-//                 slidesPerView: 3,
-//                 },
-//             }}
-//             modules={[Autoplay, Pagination, Navigation]}
-//             slidesPerView={2}
-//             spaceBetween={30}
-//             autoplay={{
-//               delay: 2500,
-//               disableOnInteraction: false,
-//             }}
-//             className="testimonials-slider"
-//           >
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//             <SwiperSlide>
-//               <TestimonialCard />
-//             </SwiperSlide>
-//           </Swiper>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
 
-// export default Testimonials;
+const ReviewCard = ({ img, name, username, body }) => {
+  return (
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
+const MarqueeDemo = () => {
+  return (
+    <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl p-8">
+      {/* Heading and Paragraph Section */}
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+          What People Say About Us
+        </h2>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          At Grow More, we are committed to delivering the best services to our
+          clients. Our customers' satisfaction is our top priority, and their
+          feedback keeps us growing and improving every day.
+        </p>
+      </div>
+
+      {/* Marquee Section */}
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+
+      {/* Gradients for visual effect */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+    </div>
+  );
+};
+
+export default MarqueeDemo;
