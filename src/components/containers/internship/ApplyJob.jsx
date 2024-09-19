@@ -1,25 +1,33 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ApplyJob.css";
+import { JobApplicationService } from "../../../services/JobApplicationSer";
+import {
+  setLoader,
+  fetchJobApplicationsFailure,
+} from "../../../redux-store/slices/JobApplicationSlice";
+import { useDispatch, useSelector } from "react-redux";
+import Toast from "../toast/Toast";
+import Loader from "../loader/Loader";
 
 const ApplyJob = () => {
   const { jobTitle } = useParams();
-
-  // State for form fields
+  const dispatch = useDispatch();
+  let { loading, error } = useSelector((state) => state.job_application);
   const [formData, setFormData] = useState({
-    name: "",
+    jobTitle: jobTitle,
+    fullName: "",
     email: "",
     phone: "",
     education: "",
     percentage: "",
+    totalExp: "",
     resume: null,
     coverLetter: "",
     terms: false,
   });
 
-  // State for toast message visibility
-  const [toastVisible, setToastVisible] = useState(false);
-
+  const [jobApplySuccess, setJobApplySuccess] = useState(false);
   // Handle input change
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
@@ -31,33 +39,53 @@ const ApplyJob = () => {
       setFormData({ ...formData, [name]: value });
     }
   };
+  const ApplyJobAPI = async (payload) => {
+    setJobApplySuccess(false);
+    try {
+      dispatch(setLoader(true));
+      const response = await JobApplicationService.ApplyForJob(payload);
+      if (response.status === 201) {
+        // dispatch(fetchJobApplicationsSuccess(response.data));
+        dispatch(setLoader(false));
+        setJobApplySuccess(true);
+      } else {
+        dispatch(fetchJobApplicationsFailure(response.data));
+      }
+    } catch (error) {
+      dispatch(fetchJobApplicationsFailure(error.message));
+    }
+  };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Save form data to localStorage
-    localStorage.setItem("jobApplication", JSON.stringify(formData));
+    // Create a new FormData object
+    const data = new FormData();
+    data.append("jobTitle", formData.jobTitle);
+    data.append("fullName", formData.fullName);
+    data.append("email", formData.email);
+    data.append("phone", formData.phone);
+    data.append("highestEducation", formData.education);
+    data.append("percentage", formData.percentage);
+    data.append("totalExp", formData.totalExp || "");
+    data.append("coverLetter", formData.coverLetter);
+    data.append("resume", formData.resume);
 
-    // Show success toast
-    setToastVisible(true);
+    // Call the API
+    await ApplyJobAPI(data);
 
-    // Clear form data
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      education: "",
-      percentage: "",
-      resume: null,
-      coverLetter: "",
-      terms: false,
-    });
-
-    // Hide the toast after a few seconds
-    setTimeout(() => {
-      setToastVisible(false);
-    }, 3000);
+    jobApplySuccess &&
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        education: "",
+        percentage: "",
+        resume: null,
+        coverLetter: "",
+        totalExp: "",
+        terms: false,
+      });
   };
 
   return (
@@ -65,12 +93,24 @@ const ApplyJob = () => {
       <h1>Apply for {jobTitle}</h1>
       <form className="apply-form" onSubmit={handleSubmit}>
         <div className="form-group">
+          <label htmlFor="name">Job Title</label>
+          <input
+            type="text"
+            id="jobTitle"
+            name="jobTitle"
+            value={formData.jobTitle}
+            onChange={handleChange}
+            required
+            disabled
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="name">Full Name</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
             onChange={handleChange}
             required
           />
@@ -129,6 +169,19 @@ const ApplyJob = () => {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="totalExp">Total Experience (in years)</label>
+          <input
+            type="number"
+            id="totalExp"
+            name="totalExp"
+            value={formData.totalExp}
+            step="0.1"
+            min="0"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
           <label htmlFor="resume">Upload Resume</label>
           <input
             type="file"
@@ -162,11 +215,11 @@ const ApplyJob = () => {
         <button type="submit">Submit Application</button>
       </form>
 
-      {toastVisible && (
-        <div className="toast">
-          <p>Application successfully submitted!</p>
-        </div>
+      {jobApplySuccess && (
+        <Toast msg="Job application submitted successfully" />
       )}
+      {loading && <Loader />}
+      {error && <Toast msg={error} />}
     </div>
   );
 };
