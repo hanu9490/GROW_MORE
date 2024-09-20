@@ -1,4 +1,3 @@
-import React from "react";
 import { whyChooseusIcons } from "../../../assets/icons/icons";
 import WhyChooseusMinicard from "./WhyChooseusMinicard";
 import "./WhyChooseus.css";
