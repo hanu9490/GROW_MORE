@@ -16,5 +16,10 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
+    build: {
+      rollupOptions: {
+        external: ["react-icons/fa"],
+      },
+    },
   },
 });
