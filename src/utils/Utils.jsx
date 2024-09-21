@@ -1,5 +1,14 @@
 import { trainingImages } from "../assets/icons/icons";
-let { html, css, js, react, nodejs } = trainingImages;
+let {
+  html,
+  css,
+  js,
+  react,
+  nodejs,
+  python,
+  data_analyst,
+  data_science,
+} = trainingImages;
 
 export const courses = [
   {
@@ -31,6 +40,24 @@ export const courses = [
     description:
       "Become proficient in CSS to style and layout web pages. This course will teach you how to create visually appealing and responsive designs, making your web applications not only functional but also beautiful.",
     image: css,
+  },
+  {
+    title: "Python",
+    description:
+      "Master Python, the versatile and popular programming language. This course will take you from the basics to advanced topics, including data analysis, web scraping, and automation. Python is widely used in web development, data science, and machine learning.",
+    image: python,
+  },
+  {
+    title: "Data Analyst",
+    description:
+      "Become a data analyst by mastering data analysis techniques and tools. This course will cover data manipulation, visualization, and interpretation, enabling you to derive valuable insights from data.",
+    image: data_analyst,
+  },
+  {
+    title: "Data Science",
+    description:
+      "Become a data scientist by mastering data science concepts and techniques. This course will cover data preprocessing, model building, training, testing, and interpretation, enabling you to build and deploy machine learning models.",
+    image: data_science,
   },
 ];
 

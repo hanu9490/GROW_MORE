@@ -10,7 +10,7 @@ const Footer = () => {
             <h2 className="footer-heading">Company</h2>
             <ul className="footer-list">
               <li>
-                <a href="aboutus" className="footer-link">
+                <a href="about" className="footer-link">
                   About Us
                 </a>
               </li>

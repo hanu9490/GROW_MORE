@@ -17,6 +17,73 @@ const fadeIn = keyframes`
 const TrainingCard = () => {
   return (
     <Grid container spacing={4} justifyContent="center" style={{ padding: 16 }}>
+      <Grid item xs={12} style={{ textAlign: "center", marginBottom: "30px" }}>
+        <Typography
+          variant="h4"
+          style={{
+            color: "#1A73E8", // Updated color
+            fontFamily: "Poppins-bold",
+            marginTop: "60px",
+            animation: `${fadeIn} 0.6s ease-in-out`,
+          }}
+        >
+          Unlock Your Potential: Explore Our Software Courses
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          style={{ marginTop: "20px", animation: `${fadeIn} 0.8s ease-in-out` }}
+        >
+          Discover a wide range of courses designed to enhance your skills and
+          propel your career in software development.
+        </Typography>
+      </Grid>
+
+      <Grid item xs={12} style={{ textAlign: "center", marginBottom: "30px" }}>
+        <Typography
+          variant="h4"
+          style={{
+            color: "#1A73E8", // Updated color
+            fontFamily: "Poppins-semi-bold",
+            animation: `${fadeIn} 0.6s ease-in-out`,
+          }}
+        >
+          Why Choose Our Courses?
+        </Typography>
+        <Typography
+          variant="h6"
+          color="text.secondary"
+          style={{ marginTop: "20px", animation: `${fadeIn} 0.8s ease-in-out` }}
+        >
+          Our comprehensive curriculum covers fundamental to advanced topics,
+          allowing you to apply your knowledge through hands-on projects. Learn
+          from industry professionals who bring years of experience directly to
+          you.
+        </Typography>
+      </Grid>
+
+      <Grid item xs={12} style={{ textAlign: "center", marginBottom: "30px" }}>
+        <Typography
+          variant="h5"
+          style={{
+            color: "#1A73E8", // Updated color
+            fontFamily: "Poppins-bold",
+            marginTop: "20px",
+            animation: `${fadeIn} 0.6s ease-in-out`,
+          }}
+        >
+          Get Started Today!
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          style={{ marginTop: "20px", animation: `${fadeIn} 0.8s ease-in-out` }}
+        >
+          Enroll now and take the first step towards a successful career in
+          software development!
+        </Typography>
+      </Grid>
+
       {courses.map((course, index) => (
         <Grid item xs={12} key={index}>
           <Card
@@ -57,8 +124,9 @@ const TrainingCard = () => {
                 component="div"
                 sx={{
                   fontSize: "1.8rem",
-                  color: "#3056d3",
+                  color: "#1A73E8", // Updated color
                   fontFamily: "Poppins-semi-bold",
+                  animation: `${fadeIn} 0.6s ease-in-out`,
                 }}
               >
                 {course.title}
@@ -66,7 +134,10 @@ const TrainingCard = () => {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ fontSize: "1.2rem" }}
+                sx={{
+                  fontSize: "1.2rem",
+                  animation: `${fadeIn} 0.8s ease-in-out`,
+                }}
               >
                 {course.description}
               </Typography>

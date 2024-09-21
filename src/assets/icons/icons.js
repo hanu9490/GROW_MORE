@@ -52,6 +52,9 @@ import css from "../icons/ourtrainings/css.png";
 import js from "../icons/ourtrainings/js.png";
 import react from "../icons/ourtrainings/react.png";
 import nodejs from "../icons/ourtrainings/nodejs.png";
+import python from "../icons/ourtrainings/python.jpeg";
+import data_analyst from "../icons/ourtrainings/data_analyst.webp";
+import data_science from "../icons/ourtrainings/data_science.webp";
 
 export const whyOurServicesIcons = {
   Rectangle17,
@@ -113,4 +116,7 @@ export const trainingImages = {
   react,
   nodejs,
   softwareCloud,
+  python,
+  data_analyst,
+  data_science,
 };

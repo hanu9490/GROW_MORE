@@ -14,7 +14,6 @@ const Trainings = () => {
         justifyContent: "center",
       }}
     >
-      <h1>Our Trainings</h1>
       <TrainingCard />
       <SoftwareCoachingCard />
       <SoftwareIconsCloud />
