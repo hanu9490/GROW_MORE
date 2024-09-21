@@ -13,8 +13,9 @@ import Paper from "@mui/material/Paper";
 import JobListingScreen from "../jobposting/JobListingScreen";
 import AddJob from "../jobposting/AddJob";
 import ContactedUsers from "../contactedUsers/ContactedUsers";
+import TotalJobsApplied from "../appliedjobs/TotalJobsApplied";
 
-const pages = ["Posted Jobs", "Create Job", "Contacted Users"];
+const pages = ["Posted Jobs", "Create Job", "Contacted Users", "Jobs Applied"];
 
 const AdminNavbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -41,6 +42,8 @@ const AdminNavbar = () => {
         return <AddJob />;
       case "Contacted Users":
         return <ContactedUsers />;
+      case "Jobs Applied":
+        return <TotalJobsApplied />;
       default:
         return <JobListingScreen />;
     }

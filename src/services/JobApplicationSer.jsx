@@ -15,7 +15,7 @@ export const JobApplicationService = {
   },
   GetAppliedJobs: async () => {
     try {
-      const response = await API.get("getcontacteduserslist", {
+      const response = await API.get("getappliedjoblist", {
         headers: {
           "Content-Type": "application/json",
           accept: "application/json",
@@ -28,7 +28,7 @@ export const JobApplicationService = {
   },
   DeleteAppliedJobs: async (id) => {
     try {
-      const response = await API.delete(`deletecontacteduser/${id}`, {
+      const response = await API.delete(`deleteappliedjob/${id}`, {
         headers: {
           "Content-Type": "application/json",
           accept: "application/json",

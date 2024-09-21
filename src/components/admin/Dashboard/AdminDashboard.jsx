@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import { checkAuth, logout } from "../../../utils/JwtAuth";
-import JobListingScreen from "./jobposting/JobListingScreen";
-import AddJob from "./jobposting/AddJob";
-import ContactedUsers from "./contactedUsers/ContactedUsers";
 import "./AdminDashboard.css";
 import AdminNavbar from "./admin-navbar/AdminNavbar";
 
