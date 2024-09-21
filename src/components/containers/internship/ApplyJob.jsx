@@ -14,6 +14,7 @@ const ApplyJob = () => {
   const { jobTitle } = useParams();
   const dispatch = useDispatch();
   let { loading, error } = useSelector((state) => state.job_application);
+
   const [formData, setFormData] = useState({
     jobTitle: jobTitle,
     fullName: "",
@@ -188,7 +189,6 @@ const ApplyJob = () => {
             id="resume"
             name="resume"
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
@@ -219,7 +219,7 @@ const ApplyJob = () => {
         <Toast msg="Job application submitted successfully" />
       )}
       {loading && <Loader />}
-      {error && <Toast msg={error} />}
+      {error && <Toast msg={error.error} />}
     </div>
   );
 };

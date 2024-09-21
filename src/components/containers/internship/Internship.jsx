@@ -3,6 +3,7 @@ import JobCard from "./JobCard";
 import FeatureOfInternship from "./FeatureOfInternship";
 import InternshipAccordion from "./InternshipAccordion";
 // import { jobData } from "../../../utils/Utils";
+
 import { useSelector, useDispatch } from "react-redux";
 import { JobService } from "../../../services/JobPostingService";
 import {
@@ -24,6 +25,7 @@ const Internship = () => {
     };
     fetchJobData();
   }, []);
+
   return (
     <div className="internship-container">
       <div className="intership-text-fields">

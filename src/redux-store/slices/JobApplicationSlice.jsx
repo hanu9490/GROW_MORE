@@ -12,6 +12,7 @@ const JobApplicationSlice = createSlice({
   reducers: {
     setLoader: (state, { payload }) => {
       state.loading = payload;
+      state.error = null;
     },
     fetchJobApplicationsSuccess: (state, { payload }) => {
       state.jobApplications = payload;
