@@ -8,7 +8,8 @@ import visionimg from "../../../assets/icons/About/vision-img.png"
 import supportimg from "../../../assets/icons/About/support-img.png"
 import carousel1 from "../../../assets/icons/About/carousel1.png"
 import tick from "../../../assets/icons/About/tick.png"
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
+import { useNavigate } from "react-router-dom"
 const LandingAbout = () => {
     const carouselData = [
         {
@@ -74,13 +75,15 @@ const LandingAbout = () => {
         // Clear the interval when the component unmounts
         return () => clearInterval(interval);
     }, [carouselData.length]);
-
+    const navigate = useNavigate()
     return (
         <div className="About-background">
             <div className="About-lander" >
                 <div className="About-lander-overlayer">
                     <h1>GROW MORE</h1>
-                    <p>ABOUT US</p>
+                    <h2>ABOUT US</h2>
+                    <p>We are experienced professionals who understand that It services is
+                        changing, and are true partners who care about your success.</p>
                 </div>
             </div>
             <div className="About-description">
@@ -98,58 +101,63 @@ const LandingAbout = () => {
                     <img src={explain} alt="Foreground" className="foreground-image" />
                 </div>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center", marginTop: "10%" }}>
+
+            <div className="card-mission-container">
                 <div className="card-mission">
                     <div className="card-image-mission">
                         <img src={historyimg} alt="Card" />
                         <div className="floating-icon-mission">
-                            <img src={history} style={{ height: "40px", width: "40px" }} />{/* Replace 'FaIconName' with the icon you want */}
+                            <img src={history} style={{ height: "40px", width: "40px" }} />
                         </div>
                     </div>
                     <div className="card-content-mission">
                         <h2 className="card-title-mission">Company History</h2>
                         <p className="card-description-mission">
                             On the other hand denounce with righteous indignation and dislike
-                            men who are so beguiled and demoralized by the charms pleasure</p>
+                            men who are so beguiled and demoralized by the charms pleasure
+                        </p>
                     </div>
                 </div>
                 <div className="card-mission">
                     <div className="card-image-mission">
                         <img src={visionimg} alt="Card" />
                         <div className="floating-icon-mission">
-                            <img src={vision} style={{ height: "40px", width: "40px" }} />{/* Replace 'FaIconName' with the icon you want */}
+                            <img src={vision} style={{ height: "40px", width: "40px" }} />
                         </div>
                     </div>
                     <div className="card-content-mission">
                         <h2 className="card-title-mission">Mission & Vision</h2>
                         <p className="card-description-mission">
                             On the other hand denounce with righteous indignation and
-                            dislike men who are so beguiled
-                            and demoralized by the charms pleasure</p>
+                            dislike men who are so beguiled and demoralized by the charms pleasure
+                        </p>
                     </div>
                 </div>
                 <div className="card-mission">
                     <div className="card-image-mission">
                         <img src={supportimg} alt="Card" />
                         <div className="floating-icon-mission">
-                            <img src={support} style={{ height: "40px", width: "40px" }} />{/* Replace 'FaIconName' with the icon you want */}
+                            <img src={support} style={{ height: "40px", width: "40px" }} />
                         </div>
                     </div>
                     <div className="card-content-mission">
                         <h2 className="card-title-mission">Online Support</h2>
                         <p className="card-description-mission">
                             On the other hand denounce with righteous indignation and dislike
-                            men who are so beguiled and demoralized by the charms pleasure</p>
+                            men who are so beguiled and demoralized by the charms pleasure
+                        </p>
                     </div>
                 </div>
             </div>
+
             <div className="plan-container">
                 <h1 className="have-plan-title">Have a project in mind? Let's get to work.</h1>
-                <button className="plan-button">Contact Us</button>
+                <button className="plan-button" onClick={() => navigate("/contactus")}>Contact Us</button>
                 <h1 className="benifit-title">Great Benefits for Working With Us</h1>
                 <p className="benifit-para">The best in digital creativity and innovation.
                     Internationally accolade, showcasing excellence in design.</p>
             </div>
+
             <div style={{ marging: "20px" }}>
                 <div className="carousel-container">
                     {carouselData.map((slide, index) => (
@@ -165,7 +173,6 @@ const LandingAbout = () => {
             <div className="what-we-provide">
                 <h1>We Live by Powerful Values</h1>
                 <div className="value-container">
-
                     {values.map((each) => (
                         <div className="value-container-series" key={each.id}>
                             <div className="img-container">
