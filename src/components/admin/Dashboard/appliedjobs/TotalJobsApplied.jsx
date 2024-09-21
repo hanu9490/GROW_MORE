@@ -71,7 +71,7 @@ const TotalJobsApplied = () => {
   return (
     <Container>
       {loading ? (
-        <Typography>Loading...</Typography>
+        <Loader />
       ) : error ? (
         <Typography color="error">{error}</Typography>
       ) : (

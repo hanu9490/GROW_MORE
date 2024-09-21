@@ -1,523 +1,505 @@
 .About-lander {
-    background-image: url("../../../assets/icons/About/Landing.png");
-    height: 100vh;
-    filter: grayscale(100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    background-position: center;
+  background-image: url("../../../assets/icons/About/Landing.png");
+  height: 100vh;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
 }
 
 .About-background {
-    background-color: #fff;
-    height: auto;
-    margin: 0px;
+  background-color: #fff;
+  height: auto;
+  margin: 0px;
 }
 
 .About-lander-overlayer {
-    background-color: #c0c0c01f;
-    height: 70vh;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #c0c0c01f;
+  height: 70vh;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .About-lander-overlayer h1 {
-    font-family: "Mulish";
-    font-size: 120px;
-    font-weight: 900;
-    mix-blend-mode: difference;
-    opacity: 0.6;
-    padding-top: 300px;
+  font-family: "Mulish";
+  font-size: 120px;
+  font-weight: 900;
+  mix-blend-mode: difference;
+  opacity: 0.6;
+  padding-top: 300px;
 }
 
-
 .About-lander-overlayer h2 {
-    font-family: "Mulish";
-    font-size: 60px;
-    font-weight: 900;
-    background: linear-gradient(to right, #2E2323, #B89E9E);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    top: -115px;
-    left: 10px;
-    mix-blend-mode: difference;
-    position: relative;
-    opacity: 0.8;
+  font-family: "Mulish";
+  font-size: 60px;
+  font-weight: 900;
+  background: linear-gradient(to right, #2e2323, #b89e9e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: -115px;
+  left: 10px;
+  mix-blend-mode: difference;
+  position: relative;
+  opacity: 0.8;
 }
 
 .About-lander-overlayer p {
-    font-family: "Mulish";
-    font-size: 20px;
-    font-weight: 700;
-    width: 750px;
-    position: relative;
-    top: -115px;
-    text-align: center;
-    color: #1e1c1c;
-
+  font-family: "Mulish";
+  font-size: 20px;
+  font-weight: 700;
+  width: 750px;
+  position: relative;
+  top: -115px;
+  text-align: center;
+  color: #1e1c1c;
 }
 
 @media screen and (max-width: 768px) {
-    .About-lander {
-        height: 50vh;
-        margin-top: 60px;
-    }
+  .About-lander {
+    height: 50vh;
+    margin-top: 60px;
+  }
 
+  .About-lander-overlayer {
+    height: 50vh;
+    margin-top: 5%;
+  }
 
-    .About-lander-overlayer {
-        height: 50vh;
-        margin-top: 5%;
-    }
+  .About-lander-overlayer h1 {
+    font-size: 52px;
+    font-weight: 800;
+    padding-top: 180px;
+    width: 100%;
+    text-align: center;
+  }
 
-    .About-lander-overlayer h1 {
-        font-size: 52px;
-        font-weight: 800;
-        padding-top: 180px;
-        width: 100%;
-        text-align: center;
-    }
+  .About-lander-overlayer h2 {
+    font-size: 30px;
+    font-weight: 800;
+    top: -53px;
+  }
 
-
-    .About-lander-overlayer h2 {
-        font-size: 30px;
-        font-weight: 800;
-        top: -53px;
-    }
-
-    .About-lander-overlayer p {
-        font-size: 12px;
-        font-weight: 700;
-        width: 320px;
-        top: -45px;
-        color: #0D1741;
-    }
+  .About-lander-overlayer p {
+    font-size: 12px;
+    font-weight: 700;
+    width: 320px;
+    top: -45px;
+    color: #0d1741;
+  }
 }
 
 .About-description {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    height: 60vh;
-    column-gap: 2;
-    margin-top: 8%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 60vh;
+  column-gap: 2;
+  margin-top: 8%;
 }
 
 .About-description-left {
-    width: 45vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 30px;
+  width: 45vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
 }
 
 .About-description-left h1 {
-    font-family: "mulish";
-    font-size: 38px;
-    font-weight: 800;
-    color: #0D1741;
+  font-family: "mulish";
+  font-size: 38px;
+  font-weight: 800;
+  color: #0d1741;
 }
 
 .About-description-left p {
-    font-family: "mulish";
-    font-size: 18px;
-    font-weight: 500;
-    padding-top: 20px;
-    color: #676161;
+  font-family: "mulish";
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 20px;
+  color: #676161;
 }
 
 .About-description-left-button {
-    font-family: "mulish";
-    font-size: 17px;
-    height: 40px;
-    width: 140px;
-    border: 1px solid #494b4b;
-    background-color: #0D1741;
-    color: #f0f3f4;
-    margin-top: 30px;
+  font-family: "mulish";
+  font-size: 17px;
+  height: 40px;
+  width: 140px;
+  border: 1px solid #494b4b;
+  background-color: #0d1741;
+  color: #f0f3f4;
+  margin-top: 30px;
 }
 
 .About-description-right {
-    width: 45vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 100px;
-    position: relative;
-
+  width: 45vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+  position: relative;
 }
 
-
 .background-image {
-    width: 60%;
-    position: absolute;
-    top: 5px;
-    left: 25px;
-    z-index: 1;
-    opacity: 0.5;
-    filter: blur(2px);
-    filter: grayscale(60%);
-    /* Ensure it's behind the foreground and displayed correctly */
+  width: 60%;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  z-index: 1;
+  opacity: 0.5;
+  filter: blur(2px);
+  filter: grayscale(60%);
+  /* Ensure it's behind the foreground and displayed correctly */
 }
 
 .foreground-image {
-    width: 60%;
-    position: relative;
-    z-index: 2;
-    margin-top: 50px;
+  width: 60%;
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
+  .About-description-left {
+    width: 100vw;
+    height: 60vh;
+    padding-left: 20px;
+  }
 
+  .About-description-left h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
 
-    .About-description-left {
-        width: 100vw;
-        height: 60vh;
-        padding-left: 20px;
-    }
+  .About-description-left p {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 15px;
+  }
 
-    .About-description-left h1 {
-        font-size: 30px;
-        font-weight: 800;
-    }
+  .About-description-right {
+    width: 100vw;
+    height: 50vh;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 30px;
+  }
 
-    .About-description-left p {
-        font-size: 16px;
-        font-weight: 500;
-        padding-top: 15px;
-    }
+  .background-image {
+    width: 80%;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    z-index: 1;
+    opacity: 0.5;
+    filter: blur(4px);
+    filter: grayscale(100%);
+    margin-top: 20px;
+    /* Ensure it's behind the foreground and displayed correctly */
+  }
 
-    .About-description-right {
-        width: 100vw;
-        height: 50vh;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 10px;
-        position: relative;
-        margin-top: 30px;
-    }
-
-
-    .background-image {
-        width: 80%;
-        position: absolute;
-        top: 0px;
-        left: 60px;
-        z-index: 1;
-        opacity: 0.5;
-        filter: blur(4px);
-        filter: grayscale(100%);
-        margin-top: 20px;
-        /* Ensure it's behind the foreground and displayed correctly */
-    }
-
-    .foreground-image {
-        width: 80%;
-        position: relative;
-        z-index: 2;
-        margin-top: -70px;
-    }
+  .foreground-image {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    margin-top: -70px;
+  }
 }
 
-
 .card-mission-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 10%;
-    flex-wrap: wrap;
-    /* Allows wrapping of items */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  /* Allows wrapping of items */
 }
 
 .card-mission {
-    width: 330px;
-    /* Adjust based on your design */
-    height: 410px;
-    /* Adjust based on your design */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 330px;
+  /* Adjust based on your design */
+  height: 410px;
+  /* Adjust based on your design */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Needed for positioning floating icon */
+}
+
+.card-image-mission {
+  width: 100%;
+  height: 200px;
+  /* Image takes 40% of the card height */
+  position: relative;
+}
+
+.card-image-mission img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the area */
+}
+
+.card-content-mission {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-title-mission {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-family: "Mulish";
+  font-weight: 800;
+  color: #0d1741;
+}
+
+.card-description-mission {
+  font-size: 1rem;
+  color: #666;
+  font-family: "Mulish";
+  font-weight: 500;
+}
+
+.floating-icon-mission {
+  position: absolute;
+  bottom: -30px;
+  /* Moves icon to be halfway out of the image */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centers the icon horizontally */
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .card-mission-container {
+    flex-direction: column;
+    /* Stack cards vertically on mobile */
+    align-items: center;
+    /* Stretch to fill the width */
+    justify-content: center;
+    margin-top: 100%;
+    /* Allows wrapping of items */
+  }
+
+  .card-mission {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     /* Needed for positioning floating icon */
-
-}
-
-.card-image-mission {
-    width: 100%;
-    height: 200px;
-    /* Image takes 40% of the card height */
-    position: relative;
-}
-
-.card-image-mission img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures the image covers the area */
-}
-
-.card-content-mission {
-    text-align: center;
-    padding: 20px;
-}
-
-.card-title-mission {
-    font-size: 1.3rem;
-    margin: 10px 0;
-    font-family: "Mulish";
-    font-weight: 800;
-    color: #0D1741;
-}
-
-.card-description-mission {
-    font-size: 1rem;
-    color: #666;
-    font-family: "Mulish";
-    font-weight: 500;
-}
-
-.floating-icon-mission {
-    position: absolute;
-    bottom: -30px;
-    /* Moves icon to be halfway out of the image */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Centers the icon horizontally */
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .card-mission-container {
-        flex-direction: column;
-        /* Stack cards vertically on mobile */
-        align-items: center;
-        /* Stretch to fill the width */
-        justify-content: center;
-        margin-top: 100%;
-        /* Allows wrapping of items */
-    }
-
-    .card-mission {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        /* Needed for positioning floating icon */
-        margin-top: 40px;
-
-    }
-
+    margin-top: 40px;
+  }
 }
 
 .plan-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 3% 27% 2% 27%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 27% 2% 27%;
 }
 
 .have-plan-title {
-    text-align: center;
-    padding-top: 8%;
-    font-size: 50px;
-    font-family: "mulish";
-    font-weight: 800;
-    color: #0D1741;
+  text-align: center;
+  padding-top: 8%;
+  font-size: 50px;
+  font-family: "mulish";
+  font-weight: 800;
+  color: #0d1741;
 }
 
 .plan-button {
-    height: 50px;
-    width: 200px;
-    background-color: #0D1741;
-    color: aliceblue;
-    margin-top: 10px;
-    border-radius: 4px;
-    font-size: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: #0d1741;
+  color: aliceblue;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 20px;
 }
 
 .benifit-title {
-    font-size: 40px;
-    font-weight: 700;
-    font-family: "Mulish";
-    color: #0D1741;
-    padding-top: 30px;
-    text-align: center;
-
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Mulish";
+  color: #0d1741;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .benifit-para {
-    font-size: 20px;
-    font-weight: 500;
-    font-family: "Mulish";
-    color: #0D1741;
-    padding-top: 10px;
-    text-align: center;
-    padding: 10px 80px 10px 80px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Mulish";
+  color: #0d1741;
+  padding-top: 10px;
+  text-align: center;
+  padding: 10px 80px 10px 80px;
 }
 
 @media screen and (max-width: 768px) {
-    .plan-container {
-        padding: 3% 2% 2% 2%;
-    }
+  .plan-container {
+    padding: 3% 2% 2% 2%;
+  }
 
-    .have-plan-title {
-        padding-top: 9%;
-        font-size: 30px;
-    }
+  .have-plan-title {
+    padding-top: 9%;
+    font-size: 30px;
+  }
 
-    .plan-button {
-        height: 40px;
-        width: 160px;
-        margin-top: 30px;
-        font-size: 16px;
-    }
+  .plan-button {
+    height: 40px;
+    width: 160px;
+    margin-top: 30px;
+    font-size: 16px;
+  }
 
-    .benifit-title {
-        font-size: 28px;
-        font-weight: 800;
-        padding-top: 30px;
-    }
+  .benifit-title {
+    font-size: 28px;
+    font-weight: 800;
+    padding-top: 30px;
+  }
 
-    .benifit-para {
-        font-size: 16px;
-        text-align: center;
-        padding: 20px 10px 10px 10px;
-    }
+  .benifit-para {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+  }
 }
 
-
 .carousel-container {
-    height: 60vh;
-    overflow: hidden;
-    margin: 0 auto;
-    margin: 10px 30px 10px 30px;
-    /* Center carousel */
+  height: 60vh;
+  overflow: hidden;
+  margin: 0 auto;
+  margin: 10px 30px 10px 30px;
+  /* Center carousel */
 }
 
 .carousel-slide {
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    /* Smooth fade transition */
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  /* Smooth fade transition */
 }
 
 .carousel-slide.active {
-    display: block;
-    animation: fade 1s ease-in-out;
+  display: block;
+  animation: fade 1s ease-in-out;
 }
 
 .carousel-image {
-    width: 100%;
-    height: 70vh;
-    /* Ensures the image covers the area */
+  width: 100%;
+  height: 70vh;
+  /* Ensures the image covers the area */
 }
-
 
 .carousel-slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
-@media screen and (max-width:768px) {
-    .carousel-container {
-        height: 40vh;
-        margin:50px 10px 0px 10px;
-    }
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    height: 40vh;
+    margin: 50px 10px 0px 10px;
+  }
 
-    .carousel-image {
-        width: 100%;
-        height: 20vh;
-        object-fit: fill;
-        object-position: center;
-    }
+  .carousel-image {
+    width: 100%;
+    height: 20vh;
+    object-fit: fill;
+    object-position: center;
+  }
 }
 
 .what-we-provide {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #f0f3f4;
-    height: auto;
-    margin-top: 40px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #f0f3f4;
+  height: auto;
+  margin-top: 40px;
+  padding: 20px;
 }
 
 .what-we-provide h1 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #0D1741;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d1741;
 }
 
 .value-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  margin-top: 60px;
 }
 
 .value-container-series {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    height: 230px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 230px;
+  margin-top: 20px;
 }
 
 .img-container {
-    height: 45px;
-    width: 45px;
-    display: flex;
-    background-color: #D9D9D9;
-    border: 1px solid #D9D9D9;
-    border-radius: 60px;
-    padding: 1px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  border-radius: 60px;
+  padding: 1px;
 }
 
 .value-image {
-    height: 40px;
-    width: 40px;
-    padding: 4px;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
 }
 
 .value-container-series h1 {
-    font-family: "Mulish";
-    font-size: 20px;
-    font-weight: 800;
-    color: #0D1741;
-    padding-top: 10px;
+  font-family: "Mulish";
+  font-size: 20px;
+  font-weight: 800;
+  color: #0d1741;
+  padding-top: 10px;
 }
 
 .value-container-series p {
-    font-family: "Mulish";
-    font-size: 16px;
-    font-weight: 600;
-    color: #0D1741;
-    text-align: center;
-    padding-top: 10px;
+  font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d1741;
+  text-align: center;
+  padding-top: 10px;
 }
 
-@media screen and (max-width:768px) {
-    .what-we-provide {
-        height: auto;
-        margin-top: 0px;
-        padding: 20px;
-    }
+@media screen and (max-width: 768px) {
+  .what-we-provide {
+    height: auto;
+    margin-top: 0px;
+    padding: 20px;
+  }
 }
